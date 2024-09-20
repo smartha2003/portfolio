@@ -1,6 +1,5 @@
 import React from 'react';
 import Sakura from '../assets/sakura.png';
-import Daisy from '../assets/daisy.png';
 
 const Navbar: React.FC = () => {
   return (
