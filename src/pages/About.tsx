@@ -16,16 +16,16 @@ const About: React.FC = () => {
         </p>
       </div>
       <div className="w-1/2 flex justify-center pt-10 relative">
-        <img
-          src={YourImage}
-          alt="Shubhada Martha"
-          className="h-[500px] object-cover shadow-lg pt-10 z-index-10"
-        />
-        <div className="flex items-center justify-center w-screen h-screen">
-            <div className="gradient"></div>
-            <div className="gradient"></div>
-          </div>
-      </div>
+  <div className="flex items-center justify-center w-screen h-screen relative">
+    <img
+      src={YourImage}
+      alt="Shubhada Martha"
+      className="h-[500px] object-cover shadow-lg pt-10 relative z-20"
+    />
+    <div className="gradient absolute inset-0 z-10"></div>
+    <div className="gradient absolute inset-0 z-10"></div>
+  </div>
+</div>
     </section>
   );
 };

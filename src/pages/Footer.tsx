@@ -8,10 +8,10 @@ const Footer: React.FC = () => {
   return (
     <footer
       id="footer"
-      className="mt-20 w-full flex flex-row justify-evenly items-end  relative border-t"
+      className="mt-20 w-full flex flex-row justify-center items-center  relative border-t"
     >
-      <div className="col flex flex-col items-start p-6 w-1/4 text-white">
-        <h3 className="font-semibold text-xl">Shubhada Martha</h3>
+      <div className="col flex flex-col justify-center items-center p-6 w-1/4 text-white">
+        {/* <h3 className="font-semibold text-xl text-center">Shubhada Martha</h3> */}
         <p className="text-gray-400">
           Made with <span style={{ color: '#BA6573' }}>❤</span> by Shubhada
         </p>
