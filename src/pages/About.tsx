@@ -1,9 +1,10 @@
 import React from 'react';
 import YourImage from '../assets/img1.jpg'; // Replace with the correct path to your image file
+import Bruh from '../assets/bruh.png'
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="min-h-screen pt-10 flex items-center">
+    <section id="about" className="min-h-screen pt flex items-center">
       <div className="flex flex-col w-1/2 pr-10 text-white">
         <h2 className="font-bebas text-8xl font-bold mb-4 pt-1 text-left leading-tight tracking-widest-custom transition-transform-color duration-300 ease hover:transform hover:-translate-y-2 hover:text-[#f472b6]">
           HELLO! I AM SHUBHADA 👋🏽
@@ -17,11 +18,20 @@ const About: React.FC = () => {
       </div>
       <div className="w-1/2 flex justify-center pt-10 relative">
   <div className="flex items-center justify-center w-screen h-screen relative">
+    <div className="flex flex-col items-center justify-center space-x-4 pl-10 pb-20" > 
+    {/* align this with the hello text */}
     <img
-      src={YourImage}
-      alt="Shubhada Martha"
-      className="h-[500px] object-cover shadow-lg pt-10 relative z-20"
+      src={Bruh}
+      alt="Your Profile"
+      className="mx-10 w-1000 h-70 object-cover shadow-lg relative z-20 border-4 border-white rounded-lg"
     />
+
+      {/* <img
+        src={YourImage}
+        alt="Shubhada Martha"
+        className="h-[500px] object-cover shadow-lg pt-10 relative z-30"
+      /> */}
+    </div>
     <div className="gradient absolute inset-0 z-10"></div>
     <div className="gradient absolute inset-0 z-10"></div>
   </div>

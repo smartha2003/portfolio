@@ -21,6 +21,9 @@ export default {
       fontFamily: {
         'bebas': ['Bebas Neue', 'sans-serif'], // Adding Bebas Neue as a custom font
         'special': ['"Special Elite"', 'cursive'], // Add "Special Elite" as a custom font
+        'silkscreen': ['Silkscreen', 'cursive'], // Add Silkscreen font
+        'courgette': ["Courgette", 'cursive'],
+        'allura': ["Allura", 'cursive'],
       },
       fontSize: {
         'huge': '4rem', // Custom large size

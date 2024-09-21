@@ -5,7 +5,8 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-transparent shadow-md py-4 z-10">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#home" className="flex items-center space-x-2 font-special text-2xl font-bold text-light-pink hover:text-[#f472b6] text-shadow-lg"><img src={Sakura} alt="Rose" className="h-8 w-8" />
+        <a href="#home" className="flex items-center space-x-2 font-special text-2xl font-bold text-light-pink hover:text-[#f472b6] text-shadow-lg">
+        {/* <img src={Sakura} alt="Rose" className="h-8 w-8" /> */}
         <span>Shubhada Martha</span></a>
         <div className="ml-auto space-x-20">
           <a href="#home" className="text-light-pink hover:text-[#f472b6] text-shadow-lg">Home</a>
