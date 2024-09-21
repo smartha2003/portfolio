@@ -1,8 +1,8 @@
 // Footer.tsx
 import React from 'react';
-import LinkedIn from "../assets/linkedin.png";
-import Behance from "../assets/behance.png";
-import GitHub from "../assets/github-sign.png";
+import Behance from '../components/behance';
+import GitHub from "../components/gitHub";
+import LinkedInIcon from '../components/linkedIn';
 
 const Footer: React.FC = () => {
   return (
@@ -21,33 +21,27 @@ const Footer: React.FC = () => {
             target="_blank"
             className="link bg-gray-black rounded-lg p-2"
           >
-            <img
-              src={LinkedIn}
-              alt="CodePen"
-              className="h-6"
-            />
+            <div>
+            <LinkedInIcon />
+            </div>
           </a>
           <a
             href="https://github.com/smartha2003"
             target="_blank"
             className="link bg-gray-black rounded-lg p-2"
           >
-            <img
-              src={GitHub}
-              alt="Twitter"
-              className="h-6"
-            />
+            <div>
+            <GitHub />
+            </div>
           </a>
           <a
             href="https://www.behance.net/shubhada-martha"
             target="_blank"
             className="link bg-gray-black rounded-lg p-2"
           >
-            <img
-              src={Behance}
-              alt="YouTube"
-              className="h-6"
-            />
+                <div>
+                <Behance />
+                </div>
           </a>
         </div>
         <p className="text-sm text-gray-200 mt-4">2024 © All Rights Reserved</p>

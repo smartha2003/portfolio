@@ -9,6 +9,8 @@ export default {
       animation: {
         bounce: 'bounce 0.4s ease-in-out 3 forwards running',
         scroll: 'scroll 2.2s cubic-bezier(0.15, 0.41, 0.69, 0.94) infinite',
+        slowbounce: 'slowbounce 0.5s ease-out 1 forwards', // Expand once quickly
+        spin: 'spin 4s linear infinite', // Duration, timing function, and infinite loop
       },
       colors: {
         'dark-slate-grey': '#2F4F4F', // Custom color for dark slate grey
@@ -35,10 +37,19 @@ export default {
           '25%, 75%': { transform: 'scale(0.9)' },
           '50%': { transform: 'scale(1.1)' },
         },
+        slowbounce: {
+          '0%': { transform: 'scale(1)' },
+          '30%': { transform: 'scale(1.2)' }, // Expand quickly
+          '100%': { transform: 'scale(1)' }, // Return to normal
+        },
         scroll: {
           '0%': { opacity: '0' },
           '10%': { transform: 'translateY(0)', opacity: '1' },
           '100%': { transform: 'translateY(15px)', opacity: '0' },
+        },
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
       letterSpacing: {

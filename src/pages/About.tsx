@@ -1,5 +1,4 @@
 import React from 'react';
-import YourImage from '../assets/img1.jpg'; // Replace with the correct path to your image file
 import Bruh from '../assets/bruh.png'
 
 const About: React.FC = () => {

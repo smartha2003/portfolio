@@ -1,26 +1,27 @@
 import React from 'react';
-import ScrollDownIndicator from '../components/ScrollDownIndicator';
-import Me from '../assets/me.png';
-import Bruh from '../assets/bruh.png';
 import YourImage from '../assets/img1.jpg';
 
 const Home: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-end">
+      {/* <div className="flex items-center justify-center min-h-screen ">
+        <div className="w-40 h-40 bg-yellow-400 clip-star animate-spin"></div>
+      </div> */}
 
       <img
         src={YourImage}
-        alt="Shubhada Martha"
-        className="h-[800px] object-cover shadow-lg pt-10 relative z-30 m-10"
+        alt="Flowers"
+        className="h-[800px] object-cover shadow-lg pt-10 relative z-30 m-10 hover:animate-slowbounce"
       />
 
       {/* Container to position the text on the right side */}
       <div className="flex flex-col items-end justify-center h-full pr-20">
   
-        <h2 className="text-3xl font-special font-bold mb-4 text-right">Creative</h2>
+        <h2 className="text-3xl font-special font-bold mb-4 text-right underline decoration-[#f472b6] hover:decoration-[#f472b6]">Creative</h2>
         <h2 className="text-8xl font-special font-bold mb-4 text-right">Designer</h2>
         <h2 className="text-8xl font-special mb-4 text-right">Developer</h2>
-        <h2 className="text-3xl font-special font-bold mb-4 text-right">“Design is not just what it looks like and feels like. Design is how it works. ”    - Steve Jobs</h2>
+        <h2 className="text-3xl font-special font-bold mb-4 text-right">“Design is not just what it looks like and feels like. Design is how it works.”</h2>
+        <h2 className="text-3xl font-special font-bold mb-4 text-right">- Steve Jobs</h2>
       </div>
 
       {/* Background and other decorative elements */}
