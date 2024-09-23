@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
+  const [hover, setHover] = useState(false);
+
   return (
     <section id="contact" className="relative isolate px-6 py-24 sm:py-32 lg:px-8 min-h-screen">
       {/* Gradient Background Positioned Absolutely Behind the Form */}
-      <div className="absolute inset-0 -z-10 flex">
-        <div className="gradient w-full h-full"></div>
-        <div className="gradient w-full h-full"></div>
+      <div className="absolute inset-0 -z-10 flex items-center justify-center">
+        <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
+        <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
       </div>
 
-      <div className="mx-auto max-w-2xl">
-        <h2 className="font-bebas text-8xl font-bold mb-4 pt-1 text-center leading-tight tracking-widest-custom transition-transform-color duration-300 ease hover:transform hover:-translate-y-2 hover:text-[#f472b6]">Contact Me</h2>
+      <div
+        className="mx-auto max-w-2xl"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <h2 className="font-bebas text-8xl font-bold mb-4 pt-1 text-center leading-tight tracking-widest-custom transition-transform-color duration-300 ease hover:transform hover:-translate-y-2 hover:text-[#f472b6]">
+          {hover ? 'Contact Me 📧' : 'Contact Me ✉️'}
+        </h2>
       </div>
+
 
       <form action="https://fabform.io/f/xxxxx" method="post" className="mx-auto mt-16 max-w-xl sm:mt-20 space-y-4">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -25,7 +34,7 @@ const Contact: React.FC = () => {
                 name="first-name"
                 id="first-name"
                 autoComplete="given-name"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -39,7 +48,7 @@ const Contact: React.FC = () => {
                 name="last-name"
                 id="last-name"
                 autoComplete="family-name"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -53,7 +62,7 @@ const Contact: React.FC = () => {
                 name="email"
                 id="email"
                 autoComplete="email"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-light-pink focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -66,7 +75,7 @@ const Contact: React.FC = () => {
                 name="message"
                 id="message"
                 rows={4}
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
               ></textarea>
             </div>
           </div>

@@ -98,6 +98,14 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #fbcfe8 !important; /* Pink text color */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Ensures background stays transparent */
+  border: 1px solid white !important; /* Set border color to pink */
+  transition: background-color 5000s ease-in-out 0s; /* Prevents background color changes */
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

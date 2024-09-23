@@ -11,6 +11,7 @@ export default {
         scroll: 'scroll 2.2s cubic-bezier(0.15, 0.41, 0.69, 0.94) infinite',
         slowbounce: 'slowbounce 0.5s ease-out 1 forwards', // Expand once quickly
         spin: 'spin 4s linear infinite', // Duration, timing function, and infinite loop
+        loop: 'loop 15s linear infinite',
       },
       colors: {
         'dark-slate-grey': '#2F4F4F', // Custom color for dark slate grey
@@ -50,6 +51,10 @@ export default {
         spin: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
+        },
+        loop: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       letterSpacing: {
