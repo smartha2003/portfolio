@@ -42,7 +42,7 @@ const experiences = [
     duration: 'May 2020 - Dec 2020',
   },
   {
-    role: 'Software Developer Intern',
+    role: 'Software Developer',
     company: 'TruckPedia',
     description:
       'Contributed to the development of a React Native mobile app for TruckPedia, transforming their existing website designs into a cohesive and intuitive mobile experience. This project focused on ensuring seamless integration and delivering a consistent user experience across platforms.',
