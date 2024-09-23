@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
           <a href="#experience" className="text-light-pink font-special hover:text-[#f472b6] text-shadow-lg">Experience</a>
           <a href="#projects" className="text-light-pink font-special hover:text-[#f472b6] text-shadow-lg">Projects</a>
           <a href="#contact" className="text-light-pink font-special hover:text-[#f472b6] text-shadow-lg">Contact</a>
-          <a href="/ShubhadaMartha_Resume_2024_webDev.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/myportfolio/ShubhadaMartha_Resume_2024_webDev.pdf " target="_blank" rel="noopener noreferrer">
             <button className="border-2 border-white text-light-pink font-special text-shadow-lg px-4 py-2 rounded bg-transparent hover:bg-[#f472b6] hover:text-dark-slate-grey transition duration-300 hover:animate-bounce">
               Resume
             </button>
