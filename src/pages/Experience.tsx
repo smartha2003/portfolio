@@ -15,7 +15,7 @@ const experiences = [
     },
     {
         role: 'Technical Director',
-        company: 'GDSC',
+        company: 'Google Developer Student Club (GDSC)',
         description:
           'Playing a pivotal role in guiding teams, designing educational programs, and organizing impactful events that promote learning and community engagement.',
         duration: 'Aug 2024 - Present',
@@ -29,7 +29,7 @@ const experiences = [
   },
   {
     role: 'Product Manager',
-    company: 'GDSC',
+    company: 'Google Developer Student Club (GDSC)',
     description:
       'Led the revamp of the GDSC and DevFest websites, utilizing TypeScript and hosting the platforms on Google Cloud with a SQL backend. This project aimed to enhance the websites performance, usability, and overall user experience.',
     duration: 'Oct 2023 - May 2024',
@@ -39,7 +39,7 @@ const experiences = [
     company: 'Expo Lab',
     description:
       'Engaged in various roles, from designing app prototypes to developing intuitive user interfaces. My work focused on creating engaging, user-friendly experiences while ensuring detailed project documentation and seamless front-end functionality.',
-    duration: 'May 2020 - Dec 2020',
+    duration: 'May 2023 - Dec 2023',
   },
   {
     role: 'Software Developer',

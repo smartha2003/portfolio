@@ -4,135 +4,128 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom'; // Assuming you are using react-router for navigation
 
 // Sample data for projects, replace with actual project details
-const designProjects = [
-  {
-    title: 'CS Tutoring Club',
-    description: 'A brief description of Design Project One.',
-    detailedDescription:
-      'This design project focuses on creating a visually appealing user interface with a focus on color and typography.',
-    imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
-  },
-  {
-    title: 'CalShare',
-    description: 'A brief description of CS Project One.',
-    detailedDescription:
-      'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
-    imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
-  },
-  {
-    title: 'Kultrify',
-    description: 'A brief description of Design Project Two.',
-    detailedDescription:
-      'This project involves creating engaging graphics and animations for a marketing campaign.',
-    imageUrl: 'https://via.placeholder.com/300',
-  },
-  {
-    title: 'FarmChain',
-    description: 'A brief description of CS Project Three.',
-    detailedDescription:
-      'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
-    imageUrl: 'https://via.placeholder.com/300',
-  },
-  {
-    title: 'RideSync',
-    description: 'A brief description of CS Project Three.',
-    detailedDescription:
-      'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
-    imageUrl: 'https://via.placeholder.com/300',
-  },
-  {
-    title: 'Naruto: Shuriken Zine',
-    description: 'A brief description of CS Project Three.',
-    detailedDescription:
-      'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
-    imageUrl: 'https://via.placeholder.com/300',
-  },
-  {
-    title: 'The Weeknd Poster',
-    description: 'A brief description of CS Project Three.',
-    detailedDescription:
-      'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
-    imageUrl: 'https://via.placeholder.com/300',
-  },
-  {
-    title: 'Typography Poster',
-    description: 'A brief description of CS Project Three.',
-    detailedDescription:
-      'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
-    imageUrl: 'https://via.placeholder.com/300',
-  },
-];
+// const designProjects = [
+//   {
+//     title: 'CS Tutoring Club',
+//     description: 'A brief description of Design Project One.',
+//     detailedDescription:
+//       'This design project focuses on creating a visually appealing user interface with a focus on color and typography.',
+//     imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
+//     link: 'https://example.com/design-project-one',
+//   },
+//   {
+//     title: 'CalShare',
+//     description: 'A brief description of CS Project One.',
+//     detailedDescription:
+//       'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
+//     imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
+//     link: 'https://example.com/design-project-one',
+//   },
+//   {
+//     title: 'Kultrify',
+//     description: 'A brief description of Design Project Two.',
+//     detailedDescription:
+//       'This project involves creating engaging graphics and animations for a marketing campaign.',
+//     imageUrl: 'https://via.placeholder.com/300',
+//     link: 'https://example.com/design-project-one',
+//   },
+//   {
+//     title: 'FarmChain',
+//     description: 'A brief description of CS Project Three.',
+//     detailedDescription:
+//       'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
+//     imageUrl: 'https://via.placeholder.com/300',
+//     link: 'https://example.com/design-project-one',
+//   },
+//   {
+//     title: 'RideSync',
+//     description: 'A brief description of CS Project Three.',
+//     detailedDescription:
+//       'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
+//     imageUrl: 'https://via.placeholder.com/300',
+//     link: 'https://example.com/design-project-one',
+//   },
+//   {
+//     title: 'Naruto: Shuriken Zine',
+//     description: 'A brief description of CS Project Three.',
+//     detailedDescription:
+//       'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
+//     imageUrl: 'https://via.placeholder.com/300',
+//     link: 'https://example.com/design-project-one',
+//   },
+//   {
+//     title: 'The Weeknd Poster',
+//     description: 'A brief description of CS Project Three.',
+//     detailedDescription:
+//       'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
+//     imageUrl: 'https://via.placeholder.com/300',
+//     link: 'https://example.com/design-project-one',
+//   },
+//   {
+//     title: 'Typography Poster',
+//     description: 'A brief description of CS Project Three.',
+//     detailedDescription:
+//       'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
+//     imageUrl: 'https://via.placeholder.com/300',
+//     link: 'https://example.com/design-project-one',
+//   },
+// ];
 
 const csProjects = [
   {
-    title: 'CalShare',
-    description: 'A brief description of CS Project One.',
-    detailedDescription:
-      'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
-    imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
-  },
-  {
-    title: 'SafeDose',
-    description: 'A brief description of CS Project One.',
-    detailedDescription:
-      'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
-    imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
-  },
-  {
-    title: 'PayVault / PiggyBank',
-    description: 'A brief description of CS Project One.',
-    detailedDescription:
-      'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
-    imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
-  },
-  {
-    title: 'CrypGo',
-    description: 'A brief description of CS Project One.',
-    detailedDescription:
-      'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
-    imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
-  },
-  {
     title: 'GDSC Website',
-    description: 'A brief description of CS Project One.',
-    detailedDescription:
-      'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
+    description: 'Google Developer Student Club’s official website for events, resources, and community updates for students.',
     imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
-  },
-  {
+    link: 'https://gdscucdavis.com/',
+  },{
     title: 'TruckPedia',
-    description: 'A brief description of CS Project One.',
-    detailedDescription:
-      'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
+    description: 'A mobile app for Truckpedia that streamlines communication for shippers, brokers, and carriers to assign loads and share updates.',
     imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
+    link: 'https://codelabdavis.medium.com/truckpedia-2970c9b05b16',
   },
   {
     title: 'DSLD',
-    description: 'A brief description of CS Project One.',
-    detailedDescription:
-      'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
+    description: 'Statistical and graphical tools designed to detect and measure discrimination and bias, including racial, gender, age, and other forms.',
     imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
+    link: 'https://cran.r-project.org/web/packages/dsld/index.html',
   },
   {
-    title: 'Mitigating Bias in Machine Learning: A Logistic Regression Approach',
-    description: 'A brief description of CS Project One.',
-    detailedDescription:
-      'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
+    title: 'CalShare',
+    description: 'CalShare simplifies calendar sharing and scheduling by syncing Apple and Google Calendars, displaying shared free time slots.',
     imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
+    link: 'https://github.com/NitishGupta2306/CalShare',
   },
   {
-    title: 'WiseGenie',
-    description: 'A brief description of CS Project Two.',
-    detailedDescription:
-      'This project focuses on creating an efficient backend system with robust APIs and data management solutions.',
-    imageUrl: 'https://via.placeholder.com/300',
+    title: 'PiggyBank',
+    description: 'PiggyBank is a mobile wallet app that securely stores your debit and credit cards, ensuring your financial interests are protected.',
+    imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
+    link: 'https://github.com/macintAsh1984/PiggyBank',
   },
+  {
+    title: 'CrypGo',
+    description: 'CrypGo is a wallet for ResilientDB, allowing seamless access to accounts and transactions on the go.!',
+    imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
+    link: 'https://blog.resilientdb.com/2023/12/17/CrypoGo.html',
+  },
+  // {
+  //   title: 'Mitigating Bias in Machine Learning: A Logistic Regression Approach',
+  //   description: 'A brief description of CS Project One.',
+  //   detailedDescription:
+  //     'This project is about implementing a complex feature that enhances user experience by integrating seamless animations.',
+  //   imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
+  //   link: 'https://example.com/design-project-one',
+  // },
   {
     title: 'DailyMOOd',
-    description: 'A brief description of CS Project Three.',
-    detailedDescription:
-      'An interactive web application designed to provide intuitive navigation and responsive design across devices.',
+    description: 'Daily MOOd is a cutting-edge mobile app designed to help UC Davis students better understand and manage their emotions effectively.',
     imageUrl: 'https://via.placeholder.com/300',
+    link: 'https://codelabdavis.medium.com/daily-mood-5aa946535a53',
+  },
+  {
+    title: 'SafeDose',
+    description: 'SafeDose tracks opioid intake, charts dosage, alerts users of excess doses, and recommends seeing a doctor if symptoms of overdose.',
+    imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
+    link: 'https://devpost.com/software/safedose',
   },
 ];
 
@@ -154,7 +147,7 @@ const Projects: React.FC = () => {
       </div>
 
       {/* Design Projects Section */}
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <h3 className="text-4xl font-bold text-center text-light-pink mb-6">Design Projects</h3>
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           {designProjects.map((project, index) => (
@@ -164,6 +157,7 @@ const Projects: React.FC = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              onClick={() => window.open(project.link, '_blank')} // Opens the link in a new tab
             >
               <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-6">
@@ -184,11 +178,11 @@ const Projects: React.FC = () => {
             View All Design Projects
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Computer Science Projects Section */}
       <div className="mt-24">
-        <h3 className="text-4xl font-bold text-center text-light-pink mb-6">Computer Science Projects</h3>
+        {/* <h3 className="text-4xl font-bold text-center text-light-pink mb-6">Computer Science Projects</h3> */}
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           {csProjects.map((project, index) => (
             <motion.div
@@ -197,6 +191,7 @@ const Projects: React.FC = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              onClick={() => window.open(project.link, '_blank')} // Opens the link in a new tab
             >
               <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-6">
@@ -209,14 +204,14 @@ const Projects: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        <div className="text-center mt-6">
+        {/* <div className="text-center mt-6">
           <button
             onClick={() => navigate('')}
             className="text-dark-slate-grey underline hover:text-pink-500"
           >
             View All Computer Science Projects
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
