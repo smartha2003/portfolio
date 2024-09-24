@@ -198,9 +198,9 @@ const Projects: React.FC = () => {
                 <h3 className="text-2xl font-special font-bold text-[#f472b6]">{project.title}</h3>
                 <p className="font-special text-light-pink mt-2">{project.description}</p>
               </div>
-              <div className="px-6 pb-6">
+              {/* <div className="px-6 pb-6">
                 <p className="font-special text-gray-500">{project.detailedDescription}</p>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>
