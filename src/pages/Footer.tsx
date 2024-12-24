@@ -1,4 +1,3 @@
-// Footer.tsx
 import React from 'react';
 import Behance from '../components/behance';
 import GitHub from "../components/gitHub";
@@ -8,13 +7,15 @@ const Footer: React.FC = () => {
   return (
     <footer
       id="footer"
-      className="mt-20 w-full flex flex-row justify-center items-center  relative border-t"
+      className="mt-20 w-full flex flex-row justify-center items-center relative border-t"
     >
       <div className="col flex flex-col justify-center items-center p-6 w-1/4 text-white">
-        {/* <h3 className="font-semibold text-xl text-center">Shubhada Martha</h3> */}
-        <p className="text-gray-400">
-          Made with <span style={{ color: '#BA6573' }}>❤</span> by Shubhada
-        </p>
+        {/* Single-line text container */}
+        <div className="flex justify-center w-full text-gray-400 text-sm whitespace-nowrap">
+          <p>
+            Made with <span style={{ color: '#BA6573' }}>❤</span> by Shubhada | Last updated: Dec 24, 2024
+          </p>
+        </div>
         <div className="social flex gap-4 mt-4">
           <a
             href="https://www.linkedin.com/in/shubhada-martha/"
@@ -22,7 +23,7 @@ const Footer: React.FC = () => {
             className="link bg-gray-black rounded-lg p-2"
           >
             <div>
-            <LinkedInIcon />
+              <LinkedInIcon />
             </div>
           </a>
           <a
@@ -31,7 +32,7 @@ const Footer: React.FC = () => {
             className="link bg-gray-black rounded-lg p-2"
           >
             <div>
-            <GitHub />
+              <GitHub />
             </div>
           </a>
           <a
@@ -39,12 +40,12 @@ const Footer: React.FC = () => {
             target="_blank"
             className="link bg-gray-black rounded-lg p-2"
           >
-                <div>
-                <Behance />
-                </div>
+            <div>
+              <Behance />
+            </div>
           </a>
         </div>
-        <p className="text-sm text-gray-200 mt-4">2024 © All Rights Reserved</p>
+        <p className="text-sm text-gray-400 mt-4">2024 © All Rights Reserved</p>
       </div>
     </footer>
   );

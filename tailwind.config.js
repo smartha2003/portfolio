@@ -15,9 +15,13 @@ export default {
       },
       colors: {
         'dark-slate-grey': '#2F4F4F', // Custom color for dark slate grey
+        'darker-slate-grey': '#354545',
         'light-pink': '#fbcfe8',
         'light-peach': '#fb7185',
         'gray-black': '#3A3A3A',
+        'darky-gray' : '#272626',
+        'blue-light' : '#6ba8bf',
+        'turquoise' : '#5ce1e6',
         'pink-800': '#d6336c', // Custom color for a dark shade of pink
         'pink-600': '#e53e3e', // Custom color for a lighter shade of pink
       },
@@ -27,10 +31,12 @@ export default {
         'silkscreen': ['Silkscreen', 'cursive'], // Add Silkscreen font
         'courgette': ["Courgette", 'cursive'],
         'allura': ["Allura", 'cursive'],
+        'quantico': ["Quantico", 'serif'],
       },
       fontSize: {
         'huge': '4rem', // Custom large size
         'massive': '20rem', // Extra massive size for headlines
+        'small': '2rem',
       },
       keyframes: {
         bounce: {

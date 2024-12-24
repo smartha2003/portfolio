@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        <h2 className="font-bebas text-8xl font-bold mb-4 pt-1 text-center leading-tight tracking-widest-custom transition-transform-color duration-300 ease hover:transform hover:-translate-y-2 hover:text-[#f472b6]">
+        <h2 className="font-silkscreen text-5xl font-bold mb-4 pt-1 text-center leading-tight tracking-widest-custom transition-transform-color duration-300 ease hover:transform hover:-translate-y-2 hover:text-[#f472b6]">
           {hover ? 'Contact Me 📧' : 'Contact Me ✉️'}
         </h2>
       </div>
@@ -59,7 +59,8 @@ const Contact: React.FC = () => {
                 name="first_name"
                 id="first_name"
                 autoComplete="given-name"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                placeholder="Enter your first name"
+                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -73,7 +74,8 @@ const Contact: React.FC = () => {
                 name="last_name"
                 id="last_name"
                 autoComplete="family-name"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                placeholder="Enter your last name"
+                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -87,7 +89,8 @@ const Contact: React.FC = () => {
                 name="user_email"
                 id="user_email"
                 autoComplete="email"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-light-pink focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                placeholder="Enter your email address"
+                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -100,7 +103,8 @@ const Contact: React.FC = () => {
                 name="message"
                 id="message"
                 rows={4}
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                placeholder="Write your message here"
+                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
               ></textarea>
             </div>
           </div>
@@ -108,7 +112,7 @@ const Contact: React.FC = () => {
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-md bg-light-pink px-3.5 py-2.5 text-center text-sm font-semibold text-dark-slate-grey shadow-sm hover:bg-[#f472b6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f472b6]"
+            className="block w-full rounded-md bg-light-pink px-3.5 py-2.5 text-center text-sm font-semibold text-dark-slate-grey placeholder:text-gray-400 shadow-sm hover:bg-[#f472b6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f472b6]"
           >
             Send Message
           </button>

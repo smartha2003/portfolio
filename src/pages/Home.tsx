@@ -4,10 +4,6 @@ import YourImage from '../assets/img1.jpg';
 const Home: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-end ">
-      {/* <div className="flex items-center justify-center min-h-screen ">
-        <div className="w-40 h-40 bg-yellow-400 clip-star animate-spin"></div>
-      </div> */}
-
       <img
         src={YourImage}
         alt="Flowers"
@@ -25,12 +21,6 @@ const Home: React.FC = () => {
       </div>
 
       {/* Background and other decorative elements */}
-      {/*<div className="absolute inset-0 flex items-center justify-center">
-        <div className="gradient absolute inset-0 z-0"></div>
-        <div className="gradient absolute inset-0 z-0"></div>
-        {/* ScrollDownIndicator if needed */}
-        {/* <ScrollDownIndicator className="absolute z-10" /> */}
-      {/*</div>*/}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
         <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
