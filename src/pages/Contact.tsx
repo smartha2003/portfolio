@@ -17,11 +17,11 @@ const Contact: React.FC = () => {
           '5j0iox2CZRckOz0tx' // Replace with your EmailJS public key
         )
         .then(
-          (result) => {
+          () => {
             alert('Message sent successfully!');
             form.current?.reset(); // Reset the form after successful submission
           },
-          (error) => {
+          () => {
             alert('Failed to send message. Please try again later.');
           }
         );
@@ -29,95 +29,98 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative isolate px-6 py-24 sm:py-32 lg:px-8 min-h-screen">
-      {/* Gradient Background Positioned Absolutely Behind the Form */}
-      <div className="absolute inset-0 -z-10 flex items-center justify-center">
-        <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
-        <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
-      </div>
-
-      <div
-        className="mx-auto max-w-2xl"
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >
-        <h2 className="font-silkscreen text-5xl font-bold mb-4 pt-1 text-center leading-tight tracking-widest-custom transition-transform-color duration-300 ease hover:transform hover:-translate-y-2 hover:text-[#f472b6]">
+    <section id="contact" className="py-16 px-6 lg:px-16 bg-[#0c001d] text-white">
+      <div className="max-w-4xl mx-auto">
+        <h2
+          className="text-4xl font-quantico font-bold mb-8 text-center leading-tight tracking-wide hover:text-[#f472b6]"
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+        >
           {hover ? 'Contact Me 📧' : 'Contact Me ✉️'}
         </h2>
-      </div>
+        <p className="text-lg text-gray-400 mb-12 text-center">
+          Feel free to reach out! Let’s connect and create something extraordinary together:)
+        </p>
 
-
-      <form ref={form} onSubmit={sendEmail} method="post" className="mx-auto mt-16 max-w-xl sm:mt-20 space-y-4">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div className="text-left">
-            <label htmlFor="first_name" className="block text-sm font-semibold leading-6 text-white">
-              First name
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="first_name"
-                id="first_name"
-                autoComplete="given-name"
-                placeholder="Enter your first name"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
-              />
+        <div className="bg-gray-800 bg-opacity-60 rounded-lg shadow-lg p-6 sm:p-12">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="space-y-6"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label
+                  htmlFor="first_name"
+                  className="block text-sm font-semibold text-white text-left"
+                >
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  placeholder="Enter your first name"
+                  className="mt-2 w-full bg-transparent rounded-md border-0 px-4 py-3 text-light-pink shadow-sm ring-1 ring-inset ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="last_name"
+                  className="block text-sm font-semibold text-white text-left"
+                >
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  name="last_name"
+                  id="last_name"
+                  placeholder="Enter your last name"
+                  className="mt-2 w-full bg-transparent rounded-md border-0 px-4 py-3 text-light-pink shadow-sm ring-1 ring-inset ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm"
+                />
+              </div>
             </div>
-          </div>
-          <div className="text-left">
-            <label htmlFor="last_name" className="block text-sm font-semibold leading-6 text-white">
-              Last name
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="last_name"
-                id="last_name"
-                autoComplete="family-name"
-                placeholder="Enter your last name"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2 text-left">
-            <label htmlFor="user_email" className="block text-sm font-semibold leading-6 text-white">
-              Email
-            </label>
-            <div className="mt-2.5">
+            <div>
+              <label
+                htmlFor="user_email"
+                className="block text-sm font-semibold text-white text-left"
+              >
+                Email
+              </label>
               <input
                 type="email"
                 name="user_email"
                 id="user_email"
-                autoComplete="email"
                 placeholder="Enter your email address"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                className="mt-2 w-full bg-transparent rounded-md border-0 px-4 py-3 text-light-pink shadow-sm ring-1 ring-inset ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm"
               />
             </div>
-          </div>
-          <div className="sm:col-span-2 text-left">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
-              Message
-            </label>
-            <div className="mt-2.5">
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-semibold text-white text-left"
+              >
+                Message
+              </label>
               <textarea
                 name="message"
                 id="message"
                 rows={4}
                 placeholder="Write your message here"
-                className="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-light-pink shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm sm:leading-6"
+                className="mt-2 w-full bg-transparent rounded-md border-0 px-4 py-3 text-light-pink shadow-sm ring-1 ring-inset ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f472b6] sm:text-sm"
               ></textarea>
             </div>
-          </div>
+            <div className="mt-8">
+              <button
+                type="submit"
+                className="w-full rounded-md bg-[#f472b6] px-4 py-3 text-center text-sm font-semibold text-white shadow hover:bg-[#fde68a] hover:text-black transition"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
-        <div className="mt-10">
-          <button
-            type="submit"
-            className="block w-full rounded-md bg-light-pink px-3.5 py-2.5 text-center text-sm font-semibold text-dark-slate-grey placeholder:text-gray-400 shadow-sm hover:bg-[#f472b6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f472b6]"
-          >
-            Send Message
-          </button>
-        </div>
-      </form>
+      </div>
     </section>
   );
 };

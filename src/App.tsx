@@ -1,14 +1,14 @@
 // App.tsx
 import './App.css';
 
-import Navbar from './pages/Navbar';
+import Navbar from './components/common/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
-import Footer from './pages/Footer';
+import Footer from './components/common/Footer';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <main className="flex-grow flex flex-col relative ">
           {/* <Home /> */}
           <About />
-          <Projects />
+          <Projects/>
           <Experience />
           <Gallery/>
           <Contact />

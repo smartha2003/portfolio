@@ -12,6 +12,7 @@ export default {
         slowbounce: 'slowbounce 0.5s ease-out 1 forwards', // Expand once quickly
         spin: 'spin 4s linear infinite', // Duration, timing function, and infinite loop
         loop: 'loop 15s linear infinite',
+        pulse: 'pulse 2s infinite',
       },
       colors: {
         'dark-slate-grey': '#2F4F4F', // Custom color for dark slate grey
@@ -24,6 +25,9 @@ export default {
         'turquoise' : '#5ce1e6',
         'pink-800': '#d6336c', // Custom color for a dark shade of pink
         'pink-600': '#e53e3e', // Custom color for a lighter shade of pink
+        'pink': '#f472b6',
+        'yellow': '#fde68a',
+        'green': '#6ee7b7',
       },
       fontFamily: {
         'bebas': ['Bebas Neue', 'sans-serif'], // Adding Bebas Neue as a custom font

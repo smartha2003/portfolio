@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom'; // Assuming you are using react-router for navigation
 import CalShare from '../assets/CalShare.png';
 import DailyMOOd from '../assets/DailyMOOd.png';
 import GDSC from '../assets/laptop.png';
@@ -9,6 +8,7 @@ import TruckPedia from '../assets/Truckpedia.png';
 import DSLD from '../assets/DSLD.png';
 import CrypGo from '../assets/CrypGo.png';
 import PayVault from '../assets/PayVault.png';
+import { FaHeart } from 'react-icons/fa';
 
 const csProjects = [
   {
@@ -16,7 +16,7 @@ const csProjects = [
     description: 'Google Developer Student Club’s official website for events, resources, and community updates for students.',
     imageUrl: GDSC,
     link: 'https://gdscucdavis.com/',
-    skills: ['React', 'Typescript.js', 'TailwindCSS', 'Vercel', 'SQL'],
+    skills: ['React', 'TypeScript', 'TailwindCSS', 'Vercel', 'SQL'],
   },
   {
     title: 'TruckPedia',
@@ -37,10 +37,10 @@ const csProjects = [
     description: 'CalShare simplifies calendar sharing and scheduling by syncing Apple and Google Calendars, displaying shared free time slots.',
     imageUrl: CalShare,
     link: 'https://github.com/NitishGupta2306/CalShare',
-    skills: ['Swift', 'Firebase', 'Google Authentification', 'Google & iOS Calendar API'],
+    skills: ['Swift', 'Firebase', 'Google Auth', 'Google & iOS Calendar API'],
   },
   {
-    title: 'PayVault',
+    title: 'PayVault / FroggyVault',
     description: 'PayVault is a mobile wallet app that securely stores your debit and credit cards, ensuring your financial interests are protected.',
     imageUrl: PayVault,
     link: 'https://github.com/smartha2003/PayVault',
@@ -48,10 +48,10 @@ const csProjects = [
   },
   {
     title: 'CrypGo',
-    description: 'CrypGo is a wallet for ResilientDB, allowing seamless access to accounts and transactions on the go.!',
+    description: 'CrypGo is a wallet for ResilientDB, allowing seamless access to accounts and transactions on the go.',
     imageUrl: CrypGo,
     link: 'https://blog.resilientdb.com/2023/12/17/CrypoGo.html',
-    skills: ['React Native', 'ResilientDB', 'GraphQL', 'UI/UX Design', 'HTML', 'CSS', 'Javascript'],
+    skills: ['React Native', 'ResilientDB', 'GraphQL', 'UI/UX Design', 'HTML', 'CSS', 'JavaScript'],
   },
   {
     title: 'DailyMOOd',
@@ -70,56 +70,95 @@ const csProjects = [
 ];
 
 const Projects: React.FC = () => {
-  const navigate = useNavigate();
+  const [likes, setLikes] = useState<number[]>([]); // To keep track of liked projects
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll ? csProjects : csProjects.slice(0, 4);
+
+  const toggleLike = (index: number) => {
+    if (likes.includes(index)) {
+      setLikes(likes.filter((i) => i !== index));
+    } else {
+      setLikes([...likes, index]);
+    }
+  };
 
   return (
-    <section id="projects" className="relative isolate px-6 py-24 sm:py-32 lg:px-8 min-h-screen">
-      {/* Gradient Background Positioned Absolutely Behind the Form */}
-      <div className="absolute inset-0 -z-10 flex items-center justify-center">
-        <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
-        <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
-      </div>
+    <section id="projects" className="py-16 px-6 lg:px-16 bg-[#0c001d] text-white">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-[#f472b6] text-center">Projects 💻</h2>
+        <p className="text-lg text-gray-400 mb-12 text-center">
+          Explore the transformative projects that showcase my expertise. Click on the project to learn more!
+        </p>
 
-      <div className="mx-auto max-w-2xl">
-        <h2 className="font-silkscreen text-5xl font-bold mb-4 pt-1 text-center leading-tight tracking-widest-custom transition-transform-color duration-300 ease hover:transform hover:-translate-y-2 hover:text-[#f472b6]">
-          Projects 💻
-        </h2>
-      </div>
-
-      {/* Computer Science Projects Section */}
-      <div className="mt-24">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {csProjects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={index}
-              className="shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out hover:border hover:border-[#f472b6] hover:shadow-xl group"
+              className="relative flex flex-col bg-gray-800 bg-opacity-60 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              onClick={() => window.open(project.link, '_blank')} // Opens the link in a new tab
+              whileHover={{ scale: 1.05 }} // Add subtle pop-up animation on hover
+              onClick={() => project.link && window.open(project.link, '_blank')} // Opens the link in a new tab
             >
-              <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
-              <div className="p-6">
-                <h3 className="text-2xl font-quantico font-bold text-[#f472b6]">{project.title}</h3>
-                
-                {/* Description hidden on hover */}
-                <p className="font-quantico text-light-pink mt-2 group-hover:hidden">
-                  {project.description}
-                </p>
+              {/* <div className="absolute top-4 right-4 z-10">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent card click event
+                    toggleLike(index);
+                  }}
+                  className={`text-lg p-2 rounded-full ${
+                    likes.includes(index) ? 'text-red-500' : 'text-gray-400'
+                  } hover:text-red-500 transition duration-300`}
+                >
+                  <FaHeart />
+                </button>
+              </div> */}
 
-                {/* Skills displayed on hover */}
-                <ul className="mt-2 hidden group-hover:flex gap-2 flex-wrap">
+              <img
+                src={project.imageUrl}
+                alt={project.title}
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-[#f472b6] mb-2">{project.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+                <ul className="flex flex-wrap gap-2">
                   {project.skills.map((skill, skillIndex) => (
-                    <li key={skillIndex} className="bg-[#f472b6] text-white py-1 px-3 rounded-lg shadow hover:bg-[#fde68a] hover:text-black transition duration-300 ease-in-out">
+                    <li
+                      key={skillIndex}
+                      className="bg-[#f472b6] text-white py-1 px-3 text-sm rounded-lg shadow hover:bg-[#fde68a] hover:text-black transition duration-300 ease-in-out"
+                    >
                       {skill}
                     </li>
                   ))}
                 </ul>
-
               </div>
             </motion.div>
           ))}
         </div>
+
+        {!showAll && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-6 py-2 bg-[#f472b6] text-white font-semibold rounded-full hover:bg-[#fde68a] hover:text-black transition duration-300"
+            >
+              View More ▼
+            </button>
+          </div>
+        )}
+
+        {showAll && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setShowAll(false)}
+              className="px-6 py-2 bg-[#f472b6] text-white font-semibold rounded-full hover:bg-[#fde68a] hover:text-black transition duration-300"
+            >
+              Show Less ▲
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,153 +1,157 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { FaMapMarkerAlt, FaCalendarAlt, FaBriefcase } from 'react-icons/fa';
 
-// Sample data for experience items, replace with actual details
 const experiences = [
   {
-    role: 'Software Developer',
     company: 'GBCS Group',
-    description: 'Developing and maintaining the frontend of the company website using React and Tailwind CSS.',
-    duration: 'Sep 2024 - Present',
-    skills: ['React', 'Tailwind CSS', 'TypeScript', 'GraphQL', 'Microsoft Azure'],
+    role: 'Full Stack Intern',
+    description:
+      'Spearheading the development and enhancement of the company’s website frontend using React and Tailwind CSS. Streamlined workflows and automated critical processes with TypeScript and GraphQL, ensuring optimal performance and scalability for internal tools. Demonstrating strong problem-solving skills to drive innovative web solutions.',
+    duration: 'Sep 2024 – Present',
+    location: 'Remote',
+    type: 'Part-time',
   },
   {
+    company: 'Google Developer Student Club (GDSC)',
     role: 'Technical Director',
-    company: 'Google Developer Student Club (GDSC)',
-    description: 'Guiding teams, designing educational programs, and organizing impactful events that promote learning and community engagement.',
-    duration: 'Aug 2024 - Present',
-    skills: ['Leadership', 'Event Planning', 'Web Development', 'Team Management'],
+    description:
+      'Strategically leading technical initiatives and mentoring student teams to create impactful projects. Designed educational programs that boosted community engagement and equipped students with cutting-edge skills in web and app development. Organized technical events, fostering an inclusive learning environment at UC Davis.',
+    duration: 'Aug 2024 – Present',
+    location: 'UC Davis, California',
+    type: 'Leadership',
   },
   {
-    role: 'VP of Marketing',
     company: 'CS Tutoring Club at UC Davis',
-    description: 'Spearhead the club’s promotional efforts, driving engagement through creative strategies.',
-    duration: 'Jul 2023 - Present',
-    skills: ['Marketing', 'Content Creation', 'FIGMA', 'Social Media Strategy'],
+    role: 'VP of Marketing',
+    description:
+      'Amplified club visibility by driving a 96.7% increase in Instagram followers within three months. Executed strategic marketing campaigns with visually appealing flyers and social media content. Delivered tutoring sessions in Python, C++, Algorithms, and Assembly, employing creative methods to simplify complex topics for students.',
+    duration: 'Jul 2023 – Present',
+    location: 'UC Davis, California',
+    type: 'Part-time',
   },
   {
-    role: 'Product Manager',
     company: 'Google Developer Student Club (GDSC)',
-    description: 'Led the revamp of the GDSC and DevFest websites, enhancing performance, usability, and user experience.',
-    duration: 'Oct 2023 - May 2024',
-    skills: ['Product Management', 'TypeScript', 'Google Cloud', 'SQL'],
+    role: 'Product Manager',
+    description:
+      'Successfully revamped the GDSC and DevFest websites using TypeScript and Google Cloud, significantly improving their usability and user experience. Led a team of three under Agile methodology, ensuring seamless collaboration with designers and adherence to project timelines. Delivered industry-level project management expertise under the guidance of the Technical Director.',
+    duration: 'Oct 2023 – May 2024',
+    location: 'UC Davis, California',
+    type: 'Project-based',
   },
   {
-    role: 'Software Developer and UI/UX Designer',
     company: 'Expo Lab',
-    description: 'Designed app prototypes and developed intuitive user interfaces.',
-    duration: 'May 2023 - Dec 2023',
-    skills: ['UI/UX Design', 'React', 'HTML', 'CSS', 'Javascript', 'GraphQL'],
+    role: 'Software Developer and UI/UX Designer',
+    description:
+      'Designed and developed user-centric app prototypes, implementing intuitive interfaces aligned with best UI/UX practices. Contributed to research-focused initiatives by delivering efficient and elegant solutions tailored to exploratory systems.',
+    duration: 'May 2023 – Dec 2023',
+    location: 'Remote',
+    type: 'Research',
   },
   {
-    role: 'Software Developer',
     company: 'TruckPedia',
-    description: 'Developed a React Native mobile app for TruckPedia, transforming website designs into a mobile experience.',
-    duration: 'Oct 2023 - Dec 2023',
-    skills: ['React Native', 'TypeScript', 'Express', 'Axios'],
+    role: 'Full Stack Intern',
+    description:
+      'Engineered mobile app functionalities in React Native, transforming existing website designs into a cohesive mobile experience. Collaborated directly with the TruckPedia team to understand business needs and deliver a robust and scalable application that surpassed client expectations.',
+    duration: 'Oct 2023 – Dec 2023',
+    location: 'Remote',
+    type: 'Part-time',
   },
   {
-    role: 'Research Assistant',
     company: 'Professor Norman Matloff',
-    description: 'Contributed to the development of the DSLD R package available on CRAN.',
-    duration: 'Jun 2023 - Sep 2023',
-    skills: ['R', 'Python', 'rpy2', 'Plotly', 'Pandas', 'Data Science', 'Statistical Analysis'],
+    role: 'Machine Learning Research Assistant',
+    description:
+      'Played an important role in the development of the DSLD R package, integrating statistical and graphical tools to measure discrimination and bias. Optimized data analysis processes using Python and rpy2, enhancing the package\'s performance and utility for real-world applications.',
+    duration: 'Jun 2023 – Sep 2023',
+    location: 'UC Davis, California',
+    type: 'Research',
   },
   {
-    role: 'Software Developer',
     company: 'CodeLab',
-    description: 'Developed Daily MOOd, a React Native mobile app for self-care and mood tracking.',
-    duration: 'Jan 2023 - Jun 2023',
-    skills: ['React Native', 'Google Auth', 'MongoDB', 'Mobile Development'],
+    role: 'Software Developer',
+    description:
+      'Developed features for TruckPedia’s React Native mobile app, ensuring seamless integration and enhanced usability. Collaborated with clients to refine requirements and deliver a polished product tailored to their business objectives.',
+    duration: 'Jan 2023 – Jun 2023',
+    location: 'Davis, California',
+    type: 'Part-time',
   },
   {
-    role: 'UI/UX Designer',
     company: 'Design Interactive',
-    description: 'Redesigned the User Interface of the Hinge mobile app, improving user engagement and experience.',
-    duration: 'Mar 2022 - May 2022',
-    skills: ['FIGMA', 'Adobe', 'Canva','UI Design', 'Prototyping', 'User Research', 'Mobile App Design'],
+    role: 'UI/UX Designer',
+    description:
+      'Redesigned the UI for the Hinge mobile app, incorporating user research to improve engagement and retention. Produced visually compelling designs and prototypes, showcasing a deep understanding of user behavior and design trends.',
+    duration: 'Mar 2022 – May 2022',
+    location: 'Remote',
+    type: 'Part-time',
   },
 ];
 
-const Experience: React.FC = () => {
+const Experience = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedExperiences = showAll ? experiences : experiences.slice(0, 4);
+
   return (
-    <section
-      id="experience"
-      className="relative isolate px-6 py-24 sm:py-32 lg:px-8 min-h-screen"
-    >
-      {/* Gradient Background Positioned Absolutely Behind the Form */}
-      <div className="absolute inset-0 -z-10 flex items-center justify-center">
-        <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
-        <div className="gradient w-full h-full transform translate-x-1/2 translate-y-1/2"></div>
-      </div>
-
-      <div className="mx-auto max-w-2xl">
-        <h2 className="font-silkscreen text-5xl font-bold mb-4 pt-1 text-center leading-tight tracking-widest-custom transition-transform-color duration-300 ease hover:transform hover:-translate-y-2 hover:text-[#f472b6]">
-          Experience 🌐
-        </h2>
-      </div>
-
-      {/* Timeline */}
-      <div className="relative mt-12">
-        {/* Vertical timeline line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[4px] bg-gray-300"></div>
-
-        {/* Experience Cards */}
-        {experiences.map((experience, index) => (
-          <motion.div
-            key={index}
-            className={`flex items-center mb-12 ${
-              index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
-            } group`}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+    <section id="experience" className="py-16 px-6 lg:px-16 bg-[#0c001d] text-white">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-[#f472b6]">Technical Experience 🌐</h2>
+        <p className="text-lg text-gray-400 mb-8">
+          Embarking on a relentless pursuit of growth, leadership, and excellence opportunities.
+        </p>
+        <div className="flex gap-4 mb-12">
+          <a
+            href="https://www.linkedin.com/in/shubhada-martha/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-[#fde68a] hover:text-black transition"
           >
-            {/* Experience Card */}
-            <div
-              className={`relative p-4 rounded-lg shadow-lg w-[45%] hover:border hover:border-[#f472b6] hover:shadow-xl ${
-                index % 2 === 0
-                  ? 'mr-8 items-start text-left'
-                  : 'ml-8 items-end text-right'
-              } flex flex-col backdrop-blur-md duration-300 ease hover:transform hover:-translate-y-2`}
-            >
-              {/* Arrow */}
-              <div
-                className={`absolute top-5 w-0 h-0 border-8 border-transparent ${
-                  index % 2 === 0
-                    ? 'right-full border-r-white'
-                    : 'left-full border-l-white'
-                }`}
-              ></div>
-              <h3 className="text-xl font-quantico font-bold text-[#f472b6] transition-transform-color duration-300 ease hover:transform hover:-translate-y-2 hover:text-[#fde68a]">
-                {experience.role}
-              </h3>
-              <p className="text-white font-quantico font-medium">
-                {experience.company}
-              </p>
-              <p className="text-light-pink font-quantico text-sm mt-1">
-                {experience.duration}
-              </p>
-
-              {/* Description hidden on hover */}
-              <p className="text-white font-quantico mt-2 group-hover:hidden">
-                {experience.description}
-              </p>
-
-              {/* Skills displayed on hover */}
-              <ul className="mt-4 hidden group-hover:flex gap-2 flex-wrap">
-                {experience.skills.map((skill, skillIndex) => (
-                  <li key={skillIndex} className="bg-[#f472b6] text-white py-1 px-3 rounded-lg shadow hover:bg-[#fde68a] hover:text-black transition duration-300 ease-in-out">
-                    {skill}
-                  </li>
-                ))}
-              </ul>
+            LinkedIn
+          </a>
+          <a
+            href="public/ShubhadaMartha_Resume.pdf"
+            download
+            className="px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-[#fde68a] hover:text-black transition"
+          >
+            View Resume
+          </a>
+        </div>
+        {displayedExperiences.map((exp, index) => (
+          <div
+            key={index}
+            className="mb-12 pb-8 border-b border-gray-700 last:border-0 flex flex-col md:flex-row md:items-start"
+          >
+            <div className="flex-shrink-0 w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4 md:mb-0">
+              <FaBriefcase className="text-[#f472b6] text-2xl" />
             </div>
-          </motion.div>
+            <div className="flex-1 md:ml-6 text-left">
+              <h3 className="text-xl font-semibold text-[#f472b6]">{exp.company}</h3>
+              <p className="text-lg font-bold mb-2">{exp.role}</p>
+              <p className="text-gray-400 text-sm mb-4">{exp.description}</p>
+              <div className="flex items-center text-sm text-gray-500 gap-4">
+                <div className="flex items-center gap-2">
+                  <FaBriefcase />
+                  <span>{exp.type}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaMapMarkerAlt />
+                  <span>{exp.location}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaCalendarAlt />
+                  <span>{exp.duration}</span>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
+        {!showAll && (
+          <button
+            onClick={() => setShowAll(true)}
+            className="mt-8 px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-[#fde68a] hover:text-black transition"
+          >
+            View More
+          </button>
+        )}
       </div>
-
-      {/* Infinite Scroll Animation */}
-      {/* <InfiniteScrollAnimation /> */}
     </section>
   );
 };
