@@ -93,7 +93,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-16 px-6 lg:px-16 bg-[#0c001d] text-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-[#f472b6]">Technical Experience 🌐</h2>
+        <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-turquoise text-white">Technical Experience 🌐</h2>
         <p className="text-lg text-gray-400 mb-8">
           Embarking on a relentless pursuit of growth, leadership, and excellence opportunities.
         </p>
@@ -102,14 +102,14 @@ const Experience = () => {
             href="https://www.linkedin.com/in/shubhada-martha/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-[#fde68a] hover:text-black transition"
+            className="px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-white hover:text-black transition"
           >
             LinkedIn
           </a>
           <a
             href="public/ShubhadaMartha_Resume.pdf"
             download
-            className="px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-[#fde68a] hover:text-black transition"
+            className="px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-white hover:text-black transition"
           >
             View Resume
           </a>
@@ -120,7 +120,7 @@ const Experience = () => {
             className="mb-12 pb-8 border-b border-gray-700 last:border-0 flex flex-col md:flex-row md:items-start"
           >
             <div className="flex-shrink-0 w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4 md:mb-0">
-              <FaBriefcase className="text-[#f472b6] text-2xl" />
+              <FaBriefcase className="text-turquoise text-2xl" />
             </div>
             <div className="flex-1 md:ml-6 text-left">
               <h3 className="text-xl font-semibold text-[#f472b6]">{exp.company}</h3>
@@ -146,7 +146,7 @@ const Experience = () => {
         {!showAll && (
           <button
             onClick={() => setShowAll(true)}
-            className="mt-8 px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-[#fde68a] hover:text-black transition"
+            className="mt-8 px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-white hover:text-black transition"
           >
             View More
           </button>

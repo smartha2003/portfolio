@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-16 px-6 lg:px-16 bg-[#0c001d] text-white">
       <div className="max-w-4xl mx-auto">
         <h2
-          className="text-4xl font-quantico font-bold mb-8 text-center leading-tight tracking-wide hover:text-[#f472b6]"
+          className="text-4xl font-quantico font-bold mb-8 text-center leading-tight tracking-wide hover:text-turquoise text-white"
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
             <div className="mt-8">
               <button
                 type="submit"
-                className="w-full rounded-md bg-[#f472b6] px-4 py-3 text-center text-sm font-semibold text-white shadow hover:bg-[#fde68a] hover:text-black transition"
+                className="w-full rounded-md bg-[#f472b6] px-4 py-3 text-center text-sm font-semibold text-white shadow hover:bg-turquoise hover:text-black transition"
               >
                 Send Message
               </button>

@@ -56,15 +56,15 @@ const About: React.FC = () => {
         {/* Text Section */}
         <div className="flex flex-col w-full lg:w-1/2 pr-0 lg:pr-10 text-white text-center lg:text-left">
           <h2 className="text-4xl lg:text-5xl font-silkscreen font-bold mb-4 pt-1 leading-tight tracking-widest-custom">
-            <span ref={typedRef} className="text-[#f472b6]" />
+            <span ref={typedRef} className="text-turquoise" />
           </h2>
 
           <div className="flex justify-center lg:justify-start flex-wrap gap-4 mt-4">
-            <span className="px-4 py-2 text-sm font-medium text-darky-gray bg-[#fde68a] hover:bg-[#f472b6] border border-transparent rounded-full">
+            <span className="px-4 py-2 text-sm font-medium text-[#0A1128] bg-[#f472b6] hover:bg-white border border-transparent rounded-full">
               Software Engineer
             </span>
             <span
-              className={`px-4 py-2 text-sm font-medium text-darky-gray bg-[#fde68a] hover:bg-[#f472b6] border border-transparent rounded-full transition-opacity duration-500 ease-in-out ${
+              className={`px-4 py-2 text-sm font-medium text-[#0A1128] bg-[#f472b6] hover:bg-white border border-transparent rounded-full transition-opacity duration-500 ease-in-out ${
                 fade ? 'opacity-100' : 'opacity-0'
               }`}
             >
@@ -74,7 +74,7 @@ const About: React.FC = () => {
 
           <p className="text-base lg:text-lg font-light leading-relaxed pt-8">
             I'm a fourth-year Computer Science student at UC Davis with a passion for building impactful, user-centered solutions. Currently, as a Software Developer Intern at{' '}
-            <span className="font-semibold text-[#f472b6]">GBCS Group</span>, I develop internal tools, streamline workflows, and automate processes using modern technologies like TypeScript and GraphQL.
+            <span className="font-semibold text-turquoise">GBCS Group</span>, I develop internal tools, streamline workflows, and automate processes using modern technologies like TypeScript and GraphQL.
           </p>
 
           {isExpanded && (
@@ -86,7 +86,7 @@ const About: React.FC = () => {
           {!isExpanded && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="mt-4 px-6 py-2 text-white bg-[#f472b6] rounded-full font-medium hover:bg-[#fde68a] hover:text-black transition"
+              className="mt-4 px-6 py-2 text-[#0A1128] bg-[#f472b6] rounded-full font-medium hover:bg-white hover:text-black transition"
             >
               {isExpanded ? 'Show Less' : 'View More'}
             </button>
@@ -117,7 +117,7 @@ const About: React.FC = () => {
               href="https://www.linkedin.com/in/shubhada-martha/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#fde68a] text-3xl md:text-4xl lg:text-5xl transition duration-300"
+              className="text-white hover:text-[#f472b6] text-3xl md:text-4xl lg:text-5xl transition duration-300"
             >
               <FaLinkedin />
             </a>
@@ -125,7 +125,7 @@ const About: React.FC = () => {
               href="https://github.com/smartha2003"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#fde68a] text-3xl md:text-4xl lg:text-5xl transition duration-300"
+              className="text-white hover:text-[#f472b6] text-3xl md:text-4xl lg:text-5xl transition duration-300"
             >
               <FaGithub />
             </a>
@@ -133,7 +133,7 @@ const About: React.FC = () => {
               href="https://www.behance.net/shubhada-martha"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#fde68a] text-3xl md:text-4xl lg:text-5xl transition duration-300"
+              className="text-white hover:text-[#f472b6] text-3xl md:text-4xl lg:text-5xl transition duration-300"
             >
               <FaBehance />
             </a>

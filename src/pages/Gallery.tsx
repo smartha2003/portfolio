@@ -82,7 +82,7 @@ const Gallery: React.FC = () => {
   return (
     <section id="gallery" className="py-16 px-6 lg:px-16 bg-[#0c001d] text-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-[#f472b6] ">Gallery 📷</h2>
+        <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-turquoise text-white ">Gallery 📷</h2>
         <p className="text-lg text-gray-400 mb-8">
           Snapshots of my journey with innovation and collaboration in Tech.
         </p>
@@ -91,7 +91,7 @@ const Gallery: React.FC = () => {
           {/* Left Arrow */}
           <button
             onClick={scrollLeft}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#f472b6] text-white p-2 rounded-full shadow hover:bg-[#fde68a] transition hidden md:block z-10"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#f472b6]  hover:text-[#f472b6] text-white p-2 rounded-full shadow hover:bg-white transition hidden md:block z-10"
           >
             ◀
           </button>
@@ -118,7 +118,7 @@ const Gallery: React.FC = () => {
                     />
                   </div>
                   <div className="p-4 text-center">
-                    <h3 className="text-md text-[#f472b6]">{project.title}</h3>
+                    <h3 className="text-md text-turquoise">{project.title}</h3>
                   </div>
                 </a>
               </motion.div>
@@ -128,7 +128,7 @@ const Gallery: React.FC = () => {
           {/* Right Arrow */}
           <button
             onClick={scrollRight}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#f472b6] text-white p-2 rounded-full shadow hover:bg-[#fde68a] transition hidden md:block z-10"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#f472b6] text-white hover:text-[#f472b6] p-2 rounded-full shadow hover:bg-white transition hidden md:block z-10"
           >
             ▶
           </button>

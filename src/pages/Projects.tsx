@@ -85,7 +85,7 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-16 px-6 lg:px-16 bg-[#0c001d] text-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-[#f472b6] text-center">Projects 💻</h2>
+        <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-turquoise text-white text-center">Projects 💻</h2>
         <p className="text-lg text-gray-400 mb-12 text-center">
           Explore the transformative projects that showcase my expertise. Click on the project to learn more!
         </p>
@@ -121,13 +121,13 @@ const Projects: React.FC = () => {
                 className="w-full h-60 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#f472b6] mb-2">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{project.description}</p>
                 <ul className="flex flex-wrap gap-2">
                   {project.skills.map((skill, skillIndex) => (
                     <li
                       key={skillIndex}
-                      className="bg-[#f472b6] text-white py-1 px-3 text-sm rounded-lg shadow hover:bg-[#fde68a] hover:text-black transition duration-300 ease-in-out"
+                      className="bg-[#f472b6] text-white py-1 px-3 text-sm rounded-lg shadow hover:bg-white hover:text-black transition duration-300 ease-in-out"
                     >
                       {skill}
                     </li>
