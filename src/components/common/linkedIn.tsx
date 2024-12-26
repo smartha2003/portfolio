@@ -1,7 +1,4 @@
 // src/components/LinkedInIcon.tsx
-
-import React from 'react';
-
 const LinkedInIcon = () => {
   return (
     <div className="flex items-center justify-center">

@@ -1,7 +1,5 @@
 // src/components/GitHubIcon.tsx
 
-import React from 'react';
-
 const GitHubIcon = () => {
   return (
     <div className="flex items-center justify-center">
