@@ -8,7 +8,6 @@ import TruckPedia from '../assets/Truckpedia.png';
 import DSLD from '../assets/DSLD.png';
 import CrypGo from '../assets/CrypGo.png';
 import PayVault from '../assets/PayVault.png';
-import { FaHeart } from 'react-icons/fa';
 
 const csProjects = [
   {
@@ -70,17 +69,8 @@ const csProjects = [
 ];
 
 const Projects: React.FC = () => {
-  const [likes, setLikes] = useState<number[]>([]); // To keep track of liked projects
   const [showAll, setShowAll] = useState(false);
   const displayedProjects = showAll ? csProjects : csProjects.slice(0, 4);
-
-  const toggleLike = (index: number) => {
-    if (likes.includes(index)) {
-      setLikes(likes.filter((i) => i !== index));
-    } else {
-      setLikes([...likes, index]);
-    }
-  };
 
   return (
     <section id="projects" className="py-16 px-6 lg:px-16 bg-[#0c001d] text-white">

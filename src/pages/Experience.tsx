@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaMapMarkerAlt, FaCalendarAlt, FaBriefcase } from 'react-icons/fa';
 
 const experiences = [

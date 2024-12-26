@@ -1,7 +1,5 @@
 // src/components/BehanceIcon.tsx
 
-import React from 'react';
-
 const BehanceIcon = () => {
   return (
     <div className="flex items-center justify-center">
