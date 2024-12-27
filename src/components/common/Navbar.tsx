@@ -118,7 +118,7 @@ const Navbar: React.FC = () => {
               Contact
             </a>
             <a
-              href="public/ShubhadaMartha_Resume.pdf" // Replace with the actual path to your resume
+              href="/ShubhadaMartha_Resume.pdf" // Replace with the actual path to your resume
               download="ShubhadaMartha_Resume.pdf" // Name for the downloaded file
               className="text-white text-lg font-quantico hover:text-[#f472b6] transition duration-300"
             >

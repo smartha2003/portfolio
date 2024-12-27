@@ -17,12 +17,29 @@ const About: React.FC = () => {
   const [currentOccupationIndex, setCurrentOccupationIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [displayText, setDisplayText] = useState('HELLO! I AM SHUBHADA 👋🏽');
   const typedRef = useRef<HTMLSpanElement>(null);
+
+  // Adjust text based on screen width
+  useEffect(() => {
+    const updateText = () => {
+      if (window.innerWidth < 768) {
+        setDisplayText('HELLO!');
+      } else {
+        setDisplayText('HELLO! I AM SHUBHADA 👋🏽');
+      }
+    };
+
+    updateText(); // Set initial text
+    window.addEventListener('resize', updateText);
+
+    return () => window.removeEventListener('resize', updateText);
+  }, []);
 
   useEffect(() => {
     if (typedRef.current) {
       const typed = new Typed(typedRef.current, {
-        strings: ['HELLO! I AM SHUBHADA 👋🏽'], // Strings to display
+        strings: [displayText], // Dynamically update the text
         typeSpeed: 320,
         backSpeed: 100,
         loop: true,
@@ -32,7 +49,7 @@ const About: React.FC = () => {
         typed.destroy();
       };
     }
-  }, []);
+  }, [displayText]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -51,7 +68,6 @@ const About: React.FC = () => {
       id="about"
       className="min-h-screen pt flex items-center px-6 lg:px-16 bg-transparent-to-r from-[#1e293b] via-[#334155] to-[#1e293b]"
     >
-      {/* Mobile Layout */}
       <div className="flex flex-col-reverse lg:flex-row w-full items-center lg:items-start lg:justify-between">
         {/* Text Section */}
         <div className="flex flex-col w-full lg:w-1/2 pr-0 lg:pr-10 text-white text-center lg:text-left">
@@ -59,7 +75,8 @@ const About: React.FC = () => {
             <span ref={typedRef} className="text-turquoise" />
           </h2>
 
-          <div className="flex justify-center lg:justify-start flex-wrap gap-4 mt-4">
+          {/* Hide "Software Engineer" and occupations on mobile */}
+          <div className="hidden lg:flex justify-center lg:justify-start flex-wrap gap-4 mt-4">
             <span className="px-4 py-2 text-sm font-medium text-[#0A1128] bg-[#f472b6] hover:bg-white border border-transparent rounded-full">
               Software Engineer
             </span>
@@ -111,7 +128,6 @@ const About: React.FC = () => {
               height: "clamp(100px, 22vw, 280px)",
             }}
           />
-          {/* Social Links */}
           <div className="flex justify-center gap-10 mt-16 lg:pt-10">
             <a
               href="https://www.linkedin.com/in/shubhada-martha/"
@@ -139,7 +155,6 @@ const About: React.FC = () => {
             </a>
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -18,17 +18,17 @@ const csProjects = [
     link: '',
   },
   {
-    title: 'DSLD Statistics Symposium',
+    title: 'SoTL conference 2024',
     imageUrl: DSLD,
     link: 'https://cran.r-project.org/web/packages/dsld/index.html',
   },
   {
-    title: 'AIFS Hackathon Winner',
+    title: 'AIFS Hackathon Winner 2023',
     imageUrl: AIFS,
     link: '',
   },
   {
-    title: 'GDSC Mid Year Showcase',
+    title: 'GDSC Mid-Year Showcase',
     imageUrl: GDSC2,
     link: '',
   },
@@ -43,22 +43,22 @@ const csProjects = [
     link: '',
   },
   {
-    title: 'CodeLab Social',
+    title: 'CodeLab Team Social',
     imageUrl: CodeLab,
     link: '',
   },
   {
-    title: 'AISC Case Study',
+    title: 'AISC Case Study 2022',
     imageUrl: AISC,
     link: '',
   },
   {
-    title: 'CodeLab',
+    title: 'CodeLab Cohort Fall 2024',
     imageUrl: CodeLab2,
     link: '',
   },
   {
-    title: 'GDSC Mid Year Showcase',
+    title: 'GDSC Cohort 2024',
     imageUrl: GDSC,
     link: '',
   },
