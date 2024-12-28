@@ -107,8 +107,9 @@ const Experience = () => {
             LinkedIn
           </a>
           <a
-            href="/portfolio/ShubhadaMartha_Resume.pdf"
-            download
+            href="https://docs.google.com/document/d/1UXny3T_PPYQwoBIzcauXXcebJlw8VQh0jihYyXHxRYc/view" // Replace with the actual path to your resume
+            target="_blank" // Opens the document in a new tab
+            rel="noopener noreferrer" // Improves security for external links
             className="px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-white hover:text-black transition"
           >
             View Resume

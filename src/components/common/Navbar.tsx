@@ -118,8 +118,9 @@ const Navbar: React.FC = () => {
               Contact
             </a>
             <a
-              href="/portfolio/ShubhadaMartha_Resume.pdf" // Replace with the actual path to your resume
-              download="ShubhadaMartha_Resume.pdf" // Name for the downloaded file
+              href="https://docs.google.com/document/d/1UXny3T_PPYQwoBIzcauXXcebJlw8VQh0jihYyXHxRYc/view" // Replace with the actual path to your resume
+              target="_blank" // Opens the document in a new tab
+              rel="noopener noreferrer" // Improves security for external links
               className="text-white text-lg font-quantico hover:text-[#f472b6] transition duration-300"
             >
               Resume
