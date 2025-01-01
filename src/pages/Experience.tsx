@@ -25,7 +25,7 @@ const experiences = [
     role: 'VP of Marketing',
     description:
       'Amplified club visibility by driving a 96.7% increase in Instagram followers within three months. Executed strategic marketing campaigns with visually appealing flyers and social media content. Delivered tutoring sessions in Python, C++, Algorithms, and Assembly, employing creative methods to simplify complex topics for students.',
-    duration: 'Jul 2023 – Present',
+    duration: 'Jul 2023 – Dec 2024',
     location: 'UC Davis, California',
     type: 'Part-time',
   },

@@ -79,12 +79,13 @@ const Navbar: React.FC = () => {
 
         {/* Resume Download Button */}
         <div className="hidden md:block">
-          <a
-            href="public/ShubhadaMartha_Resume.pdf" // Replace with the actual path to your resume
-            download="ShubhadaMartha_Resume.pdf" // Name for the downloaded file
-            className="px-6 py-2 text-white text-lg font-quantico bg-white bg-opacity-10 hover:text-[#f472b6] rounded-full border-2 border-white hover:border-white hover:bg-transparent transition duration-300"
+        <a
+            href="https://docs.google.com/document/d/1UXny3T_PPYQwoBIzcauXXcebJlw8VQh0jihYyXHxRYc/view" // Replace with the actual path to your resume
+            target="_blank" // Opens the document in a new tab
+            rel="noopener noreferrer" // Improves security for external links
+            className="px-6 py-2 bg-[#f472b6] text-white rounded-full text-sm hover:bg-white hover:text-black transition"
           >
-            Resume
+            View Resume
           </a>
         </div>
       </div>

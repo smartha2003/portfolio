@@ -77,7 +77,7 @@ const Projects: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-turquoise text-white text-center">Projects 💻</h2>
         <p className="text-lg text-gray-400 mb-12 text-center">
-          Explore the transformative projects that showcase my expertise. Click on the project to learn more!
+          Explore the transformative projects that showcase my expertise. Click on the project to view it!
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

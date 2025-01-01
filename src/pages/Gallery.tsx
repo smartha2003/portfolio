@@ -53,7 +53,7 @@ const csProjects = [
     link: '',
   },
   {
-    title: 'CodeLab Cohort Fall 2024',
+    title: 'CodeLab Cohort 2023',
     imageUrl: CodeLab2,
     link: '',
   },
@@ -84,7 +84,7 @@ const Gallery: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-quantico font-bold mb-8 hover:text-turquoise text-white ">Gallery 📷</h2>
         <p className="text-lg text-gray-400 mb-8">
-          Snapshots of my journey with innovation and collaboration in Tech.
+          Snapshots of my journey of innovation and collaboration in Tech.
         </p>
 
         <div className="relative">
