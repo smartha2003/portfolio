@@ -95,6 +95,9 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden mt-2 w-full">
           <div className="flex flex-col space-y-2 bg-[#0c001d] bg-opacity-80 rounded-lg mx-4 p-4 border border-opacity-50 border-[#0c001d]">
+          <a href="#about" className="flex items-center space-x-2 text-white text-2xl">
+            <span className="text-white font-silkscreen"> ᯓ★ Shubhada Martha</span>
+          </a>
             <a
               href="#about"
               className="text-white text-lg font-quantico hover:text-[#f472b6] transition duration-300"

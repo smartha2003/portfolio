@@ -96,7 +96,7 @@ const About: React.FC = () => {
 
           {isExpanded && (
             <p className="text-base lg:text-lg font-light leading-relaxed pt-6">
-              I’m deeply interested in full-stack development and exploring opportunities in AI/ML, particularly in computer vision. I thrive at the intersection of design and development, crafting solutions that are intuitive, functional, and performance-driven. Let’s connect and shape the future of technology together!
+              I’m deeply interested in full-stack development and exploring opportunities in AI/ML, particularly in computer vision. I thrive at the intersection of design and development, crafting solutions that are intuitive, functional, and performance-driven. Let’s connect and build a better tech-driven future!
             </p>
           )}
 
