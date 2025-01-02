@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import DSLD from '../assets/dsld_symposium.webp';
 import AISC from '../assets/AISC_Case_Study.jpeg';
-import CodeLab from '../assets/CodeLab_minigolf.jpg';
+import CodeLab from '../assets/DailyMoodTeam.jpeg';
 import CodeLab2 from '../assets/CodeLab.png';
 import CSTutoring2 from '../assets/CSTutoring_Tabling_wAditya.jpg';
 import GDSC from '../assets/GDSC_midyear_Group.jpg';
@@ -18,7 +18,7 @@ const csProjects = [
     link: '',
   },
   {
-    title: 'SoTL conference 2024',
+    title: 'SoTL conference 2023',
     imageUrl: DSLD,
     link: 'https://cran.r-project.org/web/packages/dsld/index.html',
   },
@@ -28,7 +28,7 @@ const csProjects = [
     link: '',
   },
   {
-    title: 'GDSC Mid-Year Showcase',
+    title: 'GDSC Showcase 2024',
     imageUrl: GDSC2,
     link: '',
   },
@@ -43,7 +43,7 @@ const csProjects = [
     link: '',
   },
   {
-    title: 'CodeLab Team Social',
+    title: 'CodeLab Team DailyMOOd',
     imageUrl: CodeLab,
     link: '',
   },
