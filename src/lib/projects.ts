@@ -74,7 +74,7 @@ export const projects: Project[] = [
     role: "Statistical software developer + researcher.",
     stack: ["R", "Python", "Statistics", "Machine Learning"],
     tags: ["Research", "Statistics", "Social Impact"],
-    heroImage: "/DSLD.png",
+    heroImage: "/portfolio/DSLD.png",
     featured: true,
     year: "2024",
     repo: "https://github.com/shubhadamartha/dsld-r-package",
