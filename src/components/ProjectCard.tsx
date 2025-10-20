@@ -16,7 +16,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, variant = "default" }: ProjectCardProps) {
   const isCompact = variant === "compact";
-  const isDetailed = variant === "detailed";
+  // const isDetailed = variant === "detailed";
 
   return (
     <motion.div

@@ -7,7 +7,7 @@ import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
-  const shouldReduceMotion = useReducedMotion();
+  // const shouldReduceMotion = useReducedMotion();
 
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-28 bg-white">
@@ -58,7 +58,7 @@ export function Hero() {
             transition={{ duration: 0.25, delay: 0.3, ease: "easeOut" }}
             className="text-lg text-muted mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
           >
-            I build because I love building — the process of turning a blank page into something real fuels me. I start with the problem, make it exist first, and keep improving it until it's something people truly love to use. My products blend AI, design, and engineering to solve real challenges and push beyond what already exists.
+            I build because I love building — the process of turning a blank page into something real fuels me. I start with the problem, make it exist first, and keep improving it until it&apos;s something people truly love to use. My products blend AI, design, and engineering to solve real challenges and push beyond what already exists.
           </motion.p>
 
           {/* CTAs */}

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { projects } from "@/lib/projects";
 import Link from "next/link";
-import { ArrowRight, ChevronLeft, ChevronRight, Briefcase, MapPin, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronLeft, ChevronRight, Briefcase, MapPin, ChevronDown, ChevronUp } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 export default function Home() {
@@ -459,7 +459,7 @@ export default function Home() {
       >
         <div className="max-w-4xl">
           <p className="text-lg text-muted-foreground mb-8">
-            Have a project in mind? Let's discuss how we can build something that makes an impact.
+            Have a project in mind? Let&apos;s discuss how we can build something that makes an impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg">

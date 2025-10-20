@@ -7,7 +7,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
+// import { Badge } from "@/components/ui/badge";
 import { projects } from "@/lib/projects";
 
 const filterTags = [
@@ -142,7 +142,7 @@ export default function ProjectsPage() {
                 Check out my featured projects on the homepage for a curated selection.
               </p>
               <Button asChild>
-                <a href="/#projects">View Featured Projects</a>
+                <Link href="/#projects">View Featured Projects</Link>
               </Button>
             </div>
           </div>
