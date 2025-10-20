@@ -2,8 +2,10 @@ import { MetadataRoute } from 'next'
 import { projects } from '@/lib/projects'
 import { designCaseStudies } from '@/lib/design'
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://shubhadamartha.dev'
+  const baseUrl = 'https://smartha2003.github.io/portfolio'
   
   // Static pages
   const staticPages = [
