@@ -14,7 +14,7 @@ interface DesignPageProps {
   };
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return designCaseStudies.map((caseStudy) => ({
     slug: caseStudy.slug,
   }));
