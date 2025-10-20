@@ -4,11 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Section } from "@/components/Section";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Heart, Code, Lightbulb, Users, Award, Coffee, Music, Camera, BookOpen } from "lucide-react";
 
 export default function About() {
   return (
@@ -24,7 +21,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl md:text-6xl text-ink leading-tight">
-              <span className="font-bold">The Story Behind My Work</span> — and Why I'm Passionate About Creating
+              <span className="font-bold">The Story Behind My Work</span> — and Why I&apos;m Passionate About Creating
             </h1>
           </motion.div>
         </div>
@@ -71,22 +68,22 @@ export default function About() {
               className="lg:col-span-2 space-y-6"
             >
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a builder at heart someone who loves creating things from the ground up and turning ambitious ideas into products that make a real difference. My work sits at the intersection of engineering, design, and AI, and I'm passionate about building tools that are both technically powerful and deeply human.
+                I&apos;m a builder at heart someone who loves creating things from the ground up and turning ambitious ideas into products that make a real difference. My work sits at the intersection of engineering, design, and AI, and I&apos;m passionate about building tools that are both technically powerful and deeply human.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I've moved around quite a bit growing up across cities, countries, and chapters and that constant change has shaped how I see the world. It taught me to adapt quickly, stay curious, and find excitement in the unknown. Each new place pushed me to step out of my comfort zone, meet new people, and discover different versions of myself a mindset I carry into everything I build.
+                I&apos;ve moved around quite a bit growing up across cities, countries, and chapters and that constant change has shaped how I see the world. It taught me to adapt quickly, stay curious, and find excitement in the unknown. Each new place pushed me to step out of my comfort zone, meet new people, and discover different versions of myself a mindset I carry into everything I build.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I see life and product-building the same way: a series of levels where every experiment, failure, and iteration adds up to something meaningful. Whether it's architecting intelligent systems, designing delightful user experiences, or scaling a product from prototype to launch, I care deeply about creating technology that people truly love to use.
+                I see life and product-building the same way: a series of levels where every experiment, failure, and iteration adds up to something meaningful. Whether it&apos;s architecting intelligent systems, designing delightful user experiences, or scaling a product from prototype to launch, I care deeply about creating technology that people truly love to use.
               </p>
 
               {/* Beyond the Work */}
               <div className="pt-8">
                 <h2 className="text-2xl font-bold text-ink mb-4">Beyond the Work</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Outside of work, I'm usually chasing new experiences — exploring a new trail, building vision boards on Pinterest, or losing track of time at the beach with my favorite playlist. I love art, nature, and anything that blends creativity with curiosity. Music is my constant companion, and I believe some of the best ideas come from long walks, cold breezes, and quiet moments under the stars.
+                  Outside of work, I&apos;m usually chasing new experiences — exploring a new trail, building vision boards on Pinterest, or losing track of time at the beach with my favorite playlist. I love art, nature, and anything that blends creativity with curiosity. Music is my constant companion, and I believe some of the best ideas come from long walks, cold breezes, and quiet moments under the stars.
                 </p>
                 
               </div>
@@ -107,31 +104,31 @@ export default function About() {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground">Best Use of Auth0</span>
-                    <span className="text-xs text-muted">HackDavis '25</span>
+                    <span className="text-xs text-muted">HackDavis &apos;25</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground">Best in Leveraging of Data/Computation</span>
-                    <span className="text-xs text-muted">AIFS '23</span>
+                    <span className="text-xs text-muted">AIFS &apos;23</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">Dean's Honors List</span>
-                    <span className="text-xs text-muted">UC Davis '23</span>
+                    <span className="text-sm text-muted-foreground">Dean&apos;s Honors List</span>
+                    <span className="text-xs text-muted">UC Davis &apos;23</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground">Architectural Drafting Regionals Silver</span>
-                    <span className="text-xs text-muted">SkillsUSA '21</span>
+                    <span className="text-xs text-muted">SkillsUSA &apos;21</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">Dean's Honors List</span>
-                    <span className="text-xs text-muted">UC Davis '21</span>
+                    <span className="text-sm text-muted-foreground">Dean&apos;s Honors List</span>
+                    <span className="text-xs text-muted">UC Davis &apos;21</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground">Connect Award</span>
-                    <span className="text-xs text-muted">FTC Robotics '20</span>
+                    <span className="text-xs text-muted">FTC Robotics &apos;20</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground">Engineering Technology Regionals Bronze</span>
-                    <span className="text-xs text-muted">SkillsUSA '20</span>
+                    <span className="text-xs text-muted">SkillsUSA &apos;20</span>
                   </div>
                 </div>
               </div>
@@ -176,9 +173,9 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-ink mb-6">Let's Build Something Together</h2>
+            <h2 className="text-3xl font-bold text-ink mb-6">Let&apos;s Build Something Together</h2>
             <p className="text-lg text-muted mb-8 max-w-2xl">
-              Have a project in mind? I'd love to hear about it and see how we can create something amazing together.
+              Have a project in mind? I&apos;d love to hear about it and see how we can create something amazing together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
               <Button asChild size="lg">
