@@ -9,9 +9,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { designCaseStudies } from "@/lib/design";
 
 interface DesignPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
@@ -21,7 +21,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: DesignPageProps): Promise<Metadata> {
-  const caseStudy = designCaseStudies.find((c) => c.slug === params.slug);
+  const { slug } = await params;
+  const caseStudy = designCaseStudies.find((c) => c.slug === slug);
   
   if (!caseStudy) {
     return {
@@ -40,8 +41,9 @@ export async function generateMetadata({ params }: DesignPageProps): Promise<Met
   };
 }
 
-export default function DesignCaseStudyPage({ params }: DesignPageProps) {
-  const caseStudy = designCaseStudies.find((c) => c.slug === params.slug);
+export default async function DesignCaseStudyPage({ params }: DesignPageProps) {
+  const { slug } = await params;
+  const caseStudy = designCaseStudies.find((c) => c.slug === slug);
 
   if (!caseStudy) {
     notFound();
