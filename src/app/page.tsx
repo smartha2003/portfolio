@@ -406,7 +406,7 @@ export default function Home() {
             {/* GDSC Image */}
             <div className="w-96 h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
           <Image
-                src="/GDSC.JPG"
+                src="/portfolio/GDSC.JPG"
                 alt="GDSC Leadership"
                 width={384}
                 height={256}
@@ -421,7 +421,7 @@ export default function Home() {
             {/* HackDavis Image */}
             <div className="w-96 h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
           <Image
-                src="/HackDavis2025.jpeg"
+                src="/portfolio/HackDavis2025.jpeg"
                 alt="HackDavis 2025 Winner"
                 width={384}
                 height={256}
@@ -436,7 +436,7 @@ export default function Home() {
             {/* CS Tutoring Image */}
             <div className="w-96 h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
           <Image
-                src="/CSTutoring.jpeg"
+                src="/portfolio/CSTutoring.jpeg"
                 alt="CS Tutoring Club"
                 width={384}
                 height={256}

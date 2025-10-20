@@ -143,7 +143,7 @@ export function Hero() {
           >
             <div className="relative w-80 h-80 lg:w-96 lg:h-96">
               <Image
-                src="/me.jpeg"
+                src="/portfolio/me.jpeg"
                 alt="Shubhada Martha"
                 fill
                 className="rounded-xl object-cover border border-border bg-white shadow-sm"

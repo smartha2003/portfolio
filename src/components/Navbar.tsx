@@ -29,7 +29,7 @@ export function Navbar() {
               className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20"
             >
               <Image
-                src="/avatar.png"
+                src="/portfolio/avatar.png"
                 alt="Shubhada Martha"
                 width={40}
                 height={40}
