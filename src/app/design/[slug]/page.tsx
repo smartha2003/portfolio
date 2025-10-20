@@ -49,7 +49,7 @@ export default async function DesignCaseStudyPage({ params }: DesignPageProps) {
     notFound();
   }
 
-  const currentIndex = designCaseStudies.findIndex((c) => c.slug === params.slug);
+  const currentIndex = designCaseStudies.findIndex((c) => c.slug === slug);
   const prevCaseStudy = currentIndex > 0 ? designCaseStudies[currentIndex - 1] : null;
   const nextCaseStudy = currentIndex < designCaseStudies.length - 1 ? designCaseStudies[currentIndex + 1] : null;
 
