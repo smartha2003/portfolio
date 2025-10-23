@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Shubhada Martha" }],
   creator: "Shubhada Martha",
   icons: {
-    icon: "/avatar.png",
-    shortcut: "/avatar.png",
-    apple: "/avatar.png",
+    icon: "/portfolio/avatar.png",
+    shortcut: "/portfolio/avatar.png",
+    apple: "/portfolio/avatar.png",
   },
   openGraph: {
     type: "website",
