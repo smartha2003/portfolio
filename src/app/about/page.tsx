@@ -28,7 +28,7 @@ export default function About() {
       </Section>
 
       {/* Bento Style Image Grid */}
-      <Section className="pt-2 pb-12 md:-mt-28">
+      <Section className="pt-8 pb-12 md:-mt-28">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -165,8 +165,8 @@ export default function About() {
       </Section>
 
       {/* Call to Action */}
-      <Section>
-        <div className="max-w-6xl mx-auto">
+      <Section className="-mt-20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

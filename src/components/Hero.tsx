@@ -41,6 +41,23 @@ export function Hero() {
             FULL-STACK & AGENTIC AI ENGINEER
           </motion.p>
 
+          {/* Profile Image - Mobile only, positioned after title */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.25, delay: 0.15, ease: "easeOut" }}
+            className="flex justify-start mb-6 lg:hidden"
+          >
+            <div className="relative w-80 h-80">
+              <Image
+                src="/portfolio/me.jpeg"
+                alt="Shubhada Martha"
+                fill
+                className="rounded-xl object-cover border border-border bg-white shadow-sm"
+              />
+            </div>
+          </motion.div>
+
           {/* Main Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
@@ -134,14 +151,14 @@ export function Hero() {
           </motion.div>
           </motion.div>
 
-          {/* Right Content - Profile Image */}
+          {/* Right Content - Profile Image (Desktop only) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: 0.2, ease: "easeOut" }}
-            className="flex justify-center lg:justify-end"
+            className="hidden lg:flex justify-end"
           >
-            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+            <div className="relative w-96 h-96">
               <Image
                 src="/portfolio/me.jpeg"
                 alt="Shubhada Martha"
