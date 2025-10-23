@@ -19,7 +19,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="text-center lg:text-left"
+            className="text-left"
           >
           {/* Name */}
           <motion.h2
@@ -56,7 +56,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: 0.3, ease: "easeOut" }}
-            className="text-lg text-muted mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            className="text-lg text-muted mb-8 max-w-2xl leading-relaxed"
           >
             I build because I love building — the process of turning a blank page into something real fuels me. I start with the problem, make it exist first, and keep improving it until it&apos;s something people truly love to use. My products blend AI, design, and engineering to solve real challenges and push beyond what already exists.
           </motion.p>
@@ -66,7 +66,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8"
+            className="flex flex-col sm:flex-row gap-4 justify-start items-start mb-8"
           >
             <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white border-0 shadow-sm">
               <Link href="#projects">
@@ -87,7 +87,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: 0.5, ease: "easeOut" }}
-            className="flex flex-wrap justify-center lg:justify-start items-center gap-6 text-sm text-muted mb-8"
+            className="flex flex-wrap justify-start items-center gap-6 text-sm text-muted mb-8"
           >
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-500 rounded-full" />
@@ -104,7 +104,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: 0.6, ease: "easeOut" }}
-            className="flex justify-center lg:justify-start items-center gap-6"
+            className="flex justify-start items-center gap-6"
           >
             <Link
               href="https://github.com/smartha2003"
