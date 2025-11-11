@@ -311,7 +311,7 @@ export default function Home() {
                 <div className="flex items-center gap-4 text-sm text-muted">
                   <div className="flex items-center gap-2">
                     <Briefcase className="h-4 w-4" />
-                    <span>Full-time</span>
+                    <span>Internship</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4" />
@@ -336,7 +336,7 @@ export default function Home() {
                 <div className="flex items-center gap-4 text-sm text-muted">
                   <div className="flex items-center gap-2">
                     <Briefcase className="h-4 w-4" />
-                    <span>Full-time</span>
+                    <span>Part-time</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4" />
