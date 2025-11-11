@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -83,7 +83,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row gap-4 justify-start items-start mb-8"
+            className="flex flex-col sm:flex-row gap-4 justify-start items-center mb-8"
           >
             <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white border-0 shadow-sm">
               <Link href="#projects">
@@ -107,12 +107,12 @@ export function Hero() {
             className="flex flex-wrap justify-start items-center gap-6 text-sm text-muted mb-8"
           >
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full" />
-              <span>20+ users onboarded via TestFlight</span>
-            </div>
-            <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full" />
               <span>8+ production websites built and deployed</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full" />
+              <span>Shipped TestFlight app</span>
             </div>
           </motion.div>
 
@@ -147,6 +147,15 @@ export function Hero() {
               aria-label="Email"
             >
               <Mail size={20} />
+            </Link>
+            <Link
+              href="https://medium.com/@shubhadam2003"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white border border-border rounded-lg hover:border-primary hover:text-primary transition-all duration-200 shadow-sm hover:shadow-md"
+              aria-label="Medium"
+            >
+              <BookOpen size={20} />
             </Link>
           </motion.div>
           </motion.div>

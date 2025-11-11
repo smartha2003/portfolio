@@ -199,8 +199,8 @@ export default function Home() {
               <p className="text-base font-medium text-ink">Founding Applied AI Engineer</p>
             </div>
             <p className="text-muted-foreground mb-3 leading-relaxed text-sm">
-              Building AI-powered health insights platform using LangGraph orchestration and vector search. 
-              Developing iOS app with HealthKit integration for early migraine pattern detection.
+              Building an AI-powered health insights platform using LangGraph orchestration and vector search. 
+              Developing an iOS app with HealthKit integration to detect and analyze personalized health patterns.
             </p>
             <div className="flex items-center gap-4 text-sm text-muted">
               <div className="flex items-center gap-2">
@@ -257,7 +257,7 @@ export default function Home() {
             <div className="flex items-center gap-4 text-sm text-muted">
               <div className="flex items-center gap-2">
                 <Briefcase className="h-4 w-4" />
-                <span>Full-time</span>
+                <span>Part-time</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />

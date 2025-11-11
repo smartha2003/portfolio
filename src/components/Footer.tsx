@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, BookOpen } from "lucide-react";
 // import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -20,6 +20,11 @@ export function Footer() {
       href: "mailto:shubhadam2003@gmail.com",
       icon: Mail,
       label: "Email",
+    },
+    {
+      href: "https://medium.com/@shubhadam2003",
+      icon: BookOpen,
+      label: "Medium",
     },
   ];
 
