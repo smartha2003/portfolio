@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -12,6 +12,7 @@ export function Navbar() {
 
   const navItems = [
     { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
   ];
 
   return (
@@ -43,8 +44,33 @@ export function Navbar() {
             variant="ghost"
             size="sm"
             onClick={() => setIsOpen(!isOpen)}
+            className="w-10 h-10 p-0 flex items-center justify-center"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            <AnimatePresence mode="wait" initial={false}>
+              {isOpen ? (
+                <motion.span
+                  key="close"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.15 }}
+                  className="inline-flex items-center justify-center"
+                >
+                  <X size={24} />
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="menu"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.15 }}
+                  className="inline-flex items-center justify-center"
+                >
+                  <Menu size={24} />
+                </motion.span>
+              )}
+            </AnimatePresence>
           </Button>
         </div>
 

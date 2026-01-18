@@ -83,12 +83,15 @@ export default function Home() {
               <h2 className="text-4xl font-bold text-ink mb-2">Selected Works</h2>
               <p className="text-muted">{String(currentProjectIndex + 1).padStart(2, '0')}/{String(featuredProjects.length).padStart(2, '0')}</p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
               <Button variant="outline" size="sm" className="w-10 h-10 p-0" onClick={prevProject}>
                 <ChevronLeft className="h-4 w-4" />
               </Button>
               <Button variant="outline" size="sm" className="w-10 h-10 p-0" onClick={nextProject}>
                 <ChevronRight className="h-4 w-4" />
+              </Button>
+              <Button asChild variant="default" size="sm" className="ml-2">
+                <Link href="/projects">View All Projects</Link>
               </Button>
             </div>
           </div>

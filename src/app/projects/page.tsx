@@ -13,20 +13,14 @@ import { projects } from "@/lib/projects";
 
 const filterTags = [
   "All",
-  "AI",
-  "Full-stack",
-  "Mobile",
-  "Health",
-  "Civic",
-  "Computer Vision",
-  "Backend",
-  "Compliance",
-  "Healthcare",
-  "ML",
+  "Artificial Intelligence",
+  "Machine Learning",
+  "Full Stack",
+  "HealthTech",
+  "Applied ML",
+  "LLM Applications",
   "Python",
-  "Data Science",
-  "Food Tech",
-  "LangChain"
+  "Backend Development"
 ];
 
 export default function ProjectsPage() {
@@ -46,11 +40,49 @@ export default function ProjectsPage() {
       );
     }
 
-    // Filter by tag
+    // Filter by tag with mappings for user-friendly filter names
     if (selectedTag !== "All") {
-      filtered = filtered.filter(project =>
-        project.tags.includes(selectedTag) || project.stack.includes(selectedTag)
-      );
+      filtered = filtered.filter(project => {
+        const tagLower = selectedTag.toLowerCase();
+        const projectTagsLower = project.tags.map(t => t.toLowerCase());
+        const projectStackLower = project.stack.map(s => s.toLowerCase());
+        
+        // Map filter tags to actual project tags/stack
+        if (selectedTag === "Artificial Intelligence") {
+          return projectTagsLower.includes("ai") || projectStackLower.some(s => s.includes("ai") || s.includes("intelligence"));
+        }
+        if (selectedTag === "Machine Learning") {
+          return projectTagsLower.includes("ml") || projectStackLower.some(s => s.includes("machine learning") || s.includes("ml"));
+        }
+        if (selectedTag === "Full Stack") {
+          return projectTagsLower.some(t => t.includes("full") && t.includes("stack")) || 
+                 projectTagsLower.includes("full-stack") ||
+                 projectTagsLower.includes("fullstack");
+        }
+        if (selectedTag === "HealthTech") {
+          return projectTagsLower.some(t => t.includes("health")) || 
+                 project.summary.toLowerCase().includes("health") ||
+                 project.stack.some(s => s.toLowerCase().includes("health"));
+        }
+        if (selectedTag === "Applied ML") {
+          return projectTagsLower.includes("ml") || projectTagsLower.includes("ai") ||
+                 projectStackLower.some(s => s.includes("machine learning") || s.includes("tensorflow") || s.includes("scikit"));
+        }
+        if (selectedTag === "LLM Applications") {
+          return projectTagsLower.includes("langchain") || projectStackLower.includes("langchain") ||
+                 project.summary.toLowerCase().includes("llm") || project.summary.toLowerCase().includes("langchain");
+        }
+        if (selectedTag === "Python") {
+          return projectStackLower.includes("python");
+        }
+        if (selectedTag === "Backend Development") {
+          return projectStackLower.some(s => s.includes("backend") || s.includes("node") || s.includes("django") || 
+                 s.includes("express") || s.includes("fastapi") || s.includes("api"));
+        }
+        
+        // Fallback to exact match
+        return projectTagsLower.includes(tagLower) || projectStackLower.includes(tagLower);
+      });
     }
 
     return filtered;
@@ -59,25 +91,25 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen pt-16">
       <Section
-        title="All Projects"
-        description="A comprehensive view of my work across AI, full-stack development, and product design."
+        title=""
+        description=""
       >
         {/* Search and Filters */}
         <div className="mb-12">
           {/* Search Bar */}
-          <div className="relative mb-8 max-w-md mx-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+          <div className="relative mb-6 max-w-2xl mx-auto">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted h-4 w-4" />
             <Input
               type="text"
               placeholder="Search projects, technologies, or tags..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10"
+              className="pl-10 h-11"
             />
           </div>
 
           {/* Filter Tags */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
             {filterTags.map((tag) => (
               <Button
                 key={tag}
@@ -92,7 +124,7 @@ export default function ProjectsPage() {
           </div>
 
           {/* Results Count */}
-          <div className="text-center text-muted-foreground mb-8">
+          <div className="text-center text-muted mb-8">
             Showing {filteredProjects.length} of {projects.length} projects
             {searchQuery && ` for "${searchQuery}"`}
             {selectedTag !== "All" && ` in ${selectedTag}`}
@@ -137,7 +169,7 @@ export default function ProjectsPage() {
         {/* Featured Projects CTA */}
         {filteredProjects.length > 0 && (
           <div className="mt-16 text-center">
-            <div className="bg-muted/50 rounded-lg p-8">
+            <div className="bg-white border border-border rounded-lg p-8">
               <h3 className="text-xl font-semibold mb-2">Looking for my best work?</h3>
               <p className="text-muted-foreground mb-4">
                 Check out my featured projects on the homepage for a curated selection.

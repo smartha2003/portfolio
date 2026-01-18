@@ -24,9 +24,9 @@ export function ProjectCard({ project, variant = "default" }: ProjectCardProps) 
       transition={{ duration: 0.2 }}
       className="h-full"
     >
-      <Card className="h-full flex flex-col group hover:shadow-lg transition-shadow duration-300">
+      <Card className="h-full flex flex-col group hover:shadow-lg transition-shadow duration-300 pt-0 px-0">
         {/* Hero Image */}
-        <div className="relative h-48 sm:h-56 overflow-hidden rounded-t-lg">
+        <div className="relative h-48 sm:h-56 overflow-hidden rounded-t-xl">
           <Image
             src={project.heroImage}
             alt={project.title}
