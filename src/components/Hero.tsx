@@ -50,7 +50,7 @@ export function Hero() {
           >
             <div className="relative w-80 h-80">
               <Image
-                src="/portfolio/me.jpeg"
+                src="/me.jpeg"
                 alt="Shubhada Martha"
                 fill
                 className="rounded-xl object-cover border border-border bg-white shadow-sm"
@@ -169,7 +169,7 @@ export function Hero() {
           >
             <div className="relative w-96 h-96">
               <Image
-                src="/portfolio/me.jpeg"
+                src="/me.jpeg"
                 alt="Shubhada Martha"
                 fill
                 className="rounded-xl object-cover border border-border bg-white shadow-sm"

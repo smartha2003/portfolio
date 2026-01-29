@@ -40,14 +40,14 @@ export default function About() {
             {/* Large image - SF (left) */}
             <div className="md:col-span-2 md:row-span-2">
               <div className="relative w-full h-96 md:h-[30rem] rounded-2xl overflow-hidden border border-border">
-                <Image src="/portfolio/SF.jpeg" alt="San Francisco" fill className="object-cover" />
+                <Image src="/SF.jpeg" alt="San Francisco" fill className="object-cover" />
               </div>
             </div>
 
             {/* Right side - Portrait (spans both rows) */}
             <div className="md:col-span-2 md:row-span-2">
               <div className="relative w-full h-96 md:h-[30rem] rounded-2xl overflow-hidden border border-border">
-                <Image src="/portfolio/me2.jpg" alt="Portrait" fill className="object-cover" />
+                <Image src="/me2.jpg" alt="Portrait" fill className="object-cover" />
                 <div className="absolute inset-0 bg-white/10"></div>
               </div>
             </div>
