@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, Github, Calendar } from "lucide-react";
+import { ExternalLink, Github, Calendar, Presentation, FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
@@ -83,7 +83,7 @@ export function ProjectCard({ project, variant = "default" }: ProjectCardProps) 
         </CardContent>
 
         <CardFooter className="pt-0">
-          <div className="flex gap-2 w-full">
+          <div className="flex flex-wrap gap-2 w-full">
             {/* <Button asChild className="flex-1">
               <Link href={`/project/${project.slug}`}>
                 Details
@@ -100,6 +100,27 @@ export function ProjectCard({ project, variant = "default" }: ProjectCardProps) 
               <Button variant="outline" size="sm" asChild>
                 <Link href={project.live} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4" />
+                </Link>
+              </Button>
+            )}
+            {project.presentation && (
+              <Button variant="outline" size="sm" asChild>
+                <Link href={project.presentation} target="_blank" rel="noopener noreferrer">
+                  <Presentation className="w-4 h-4" />
+                </Link>
+              </Button>
+            )}
+            {project.devpost && (
+              <Button variant="outline" size="sm" asChild>
+                <Link href={project.devpost} target="_blank" rel="noopener noreferrer">
+                  <FileText className="w-4 h-4" />
+                </Link>
+              </Button>
+            )}
+            {project.article && (
+              <Button variant="outline" size="sm" asChild>
+                <Link href={project.article} target="_blank" rel="noopener noreferrer">
+                  <FileText className="w-4 h-4" />
                 </Link>
               </Button>
             )}

@@ -256,53 +256,77 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     <CardTitle>Links</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    {project.slug === "aggie-pantry" ? (
-                      <>
-                        {/* Pitch Deck */}
-                        {project.repo && (
-                          <Button asChild className="w-full justify-start btn-gradient-outline">
-                            <Link href={project.repo} target="_blank" rel="noopener noreferrer">
-                              <Presentation className="mr-2 h-4 w-4" />
-                              Pitch Deck
-                            </Link>
-                          </Button>
-                        )}
-                        {/* Devpost */}
-                        <Button asChild className="w-full justify-start btn-gradient-outline">
-                          <Link href="https://devpost.com/software/the-aggie-pantry" target="_blank" rel="noopener noreferrer">
-                            <FileText className="mr-2 h-4 w-4" />
-                            Devpost
-                          </Link>
-                        </Button>
-                        {/* Live Demo */}
-                        {project.live && (
-                          <Button asChild className="w-full justify-start btn-gradient-primary">
-                            <Link href={project.live} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="mr-2 h-4 w-4" />
-                              Live Demo
-                            </Link>
-                          </Button>
-                        )}
-                      </>
-                    ) : (
-                      <>
-                        {project.repo && (
-                          <Button asChild className="w-full justify-start btn-gradient-outline">
-                            <Link href={project.repo} target="_blank" rel="noopener noreferrer">
-                              <Github className="mr-2 h-4 w-4" />
-                              View Source Code
-                            </Link>
-                          </Button>
-                        )}
-                        {project.live && (
-                          <Button asChild className="w-full justify-start btn-gradient-primary">
-                            <Link href={project.live} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="mr-2 h-4 w-4" />
-                              Live Demo
-                            </Link>
-                          </Button>
-                        )}
-                      </>
+                    {project.repo && (
+                      <Button asChild className="w-full justify-start btn-gradient-outline">
+                        <Link href={project.repo} target="_blank" rel="noopener noreferrer">
+                          <Github className="mr-2 h-4 w-4" />
+                          {project.repo.includes("github.com") ? "View Source Code" : "Repository"}
+                        </Link>
+                      </Button>
+                    )}
+                    {project.live && (
+                      <Button asChild className="w-full justify-start btn-gradient-primary">
+                        <Link href={project.live} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live Demo
+                        </Link>
+                      </Button>
+                    )}
+                    {project.presentation && (
+                      <Button asChild className="w-full justify-start btn-gradient-outline">
+                        <Link href={project.presentation} target="_blank" rel="noopener noreferrer">
+                          <Presentation className="mr-2 h-4 w-4" />
+                          Presentation
+                        </Link>
+                      </Button>
+                    )}
+                    {project.devpost && (
+                      <Button asChild className="w-full justify-start btn-gradient-outline">
+                        <Link href={project.devpost} target="_blank" rel="noopener noreferrer">
+                          <FileText className="mr-2 h-4 w-4" />
+                          Devpost
+                        </Link>
+                      </Button>
+                    )}
+                    {project.paper && project.paper !== "pdf" && project.paper.startsWith("http") && (
+                      <Button asChild className="w-full justify-start btn-gradient-outline">
+                        <Link href={project.paper} target="_blank" rel="noopener noreferrer">
+                          <FileText className="mr-2 h-4 w-4" />
+                          Research Paper
+                        </Link>
+                      </Button>
+                    )}
+                    {project.article && (
+                      <Button asChild className="w-full justify-start btn-gradient-outline">
+                        <Link href={project.article} target="_blank" rel="noopener noreferrer">
+                          <FileText className="mr-2 h-4 w-4" />
+                          Article
+                        </Link>
+                      </Button>
+                    )}
+                    {project.figma && (
+                      <Button asChild className="w-full justify-start btn-gradient-outline">
+                        <Link href={project.figma} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Figma Design
+                        </Link>
+                      </Button>
+                    )}
+                    {project.canva && (
+                      <Button asChild className="w-full justify-start btn-gradient-outline">
+                        <Link href={project.canva} target="_blank" rel="noopener noreferrer">
+                          <Presentation className="mr-2 h-4 w-4" />
+                          Canva Presentation
+                        </Link>
+                      </Button>
+                    )}
+                    {project.quarto && (
+                      <Button asChild className="w-full justify-start btn-gradient-outline">
+                        <Link href={project.quarto} target="_blank" rel="noopener noreferrer">
+                          <FileText className="mr-2 h-4 w-4" />
+                          Quarto Notebook
+                        </Link>
+                      </Button>
                     )}
                   </CardContent>
                 </Card>

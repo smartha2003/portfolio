@@ -12,6 +12,13 @@ export type Project = {
   gallery?: string[];
   repo?: string;
   live?: string;
+  presentation?: string;
+  devpost?: string;
+  paper?: string;
+  article?: string;
+  figma?: string;
+  canva?: string;
+  quarto?: string;
   year?: string;
   featured?: boolean;
 };
