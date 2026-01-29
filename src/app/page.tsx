@@ -10,6 +10,7 @@ import { projects } from "@/lib/projects";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, Briefcase, MapPin, ChevronDown, ChevronUp } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { withBasePath } from "@/lib/basePath";
 
 export default function Home() {
   const featuredProjects = projects.filter(project => project.featured);
@@ -409,7 +410,7 @@ export default function Home() {
             {/* GDSC Image */}
             <div className="w-96 h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
           <Image
-                src="/GDSC.JPG"
+                src={withBasePath("/GDSC.JPG")}
                 alt="GDSC Leadership"
                 width={384}
                 height={256}
@@ -424,7 +425,7 @@ export default function Home() {
             {/* HackDavis Image */}
             <div className="w-96 h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
           <Image
-                src="/HackDavis2025.jpeg"
+                src={withBasePath("/HackDavis2025.jpeg")}
                 alt="HackDavis 2025 Winner"
                 width={384}
                 height={256}
@@ -439,7 +440,7 @@ export default function Home() {
             {/* CS Tutoring Image */}
             <div className="w-96 h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
           <Image
-                src="/CSTutoring.jpeg"
+                src={withBasePath("/CSTutoring.jpeg")}
                 alt="CS Tutoring Club"
                 width={384}
                 height={256}

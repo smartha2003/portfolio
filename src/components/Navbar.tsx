@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { withBasePath } from "@/lib/basePath";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ export function Navbar() {
               className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20"
             >
               <Image
-                src="/avatar.png"
+                src={withBasePath("/avatar.png")}
                 alt="Shubhada Martha"
                 width={40}
                 height={40}

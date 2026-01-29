@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Github, Linkedin, Mail, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { withBasePath } from "@/lib/basePath";
 
 export function Hero() {
   // const shouldReduceMotion = useReducedMotion();
@@ -50,7 +51,7 @@ export function Hero() {
           >
             <div className="relative w-80 h-80">
               <Image
-                src="/me.jpeg"
+                src={withBasePath("/me.jpeg")}
                 alt="Shubhada Martha"
                 fill
                 className="rounded-xl object-cover border border-border bg-white shadow-sm"
@@ -169,7 +170,7 @@ export function Hero() {
           >
             <div className="relative w-96 h-96">
               <Image
-                src="/me.jpeg"
+                src={withBasePath("/me.jpeg")}
                 alt="Shubhada Martha"
                 fill
                 className="rounded-xl object-cover border border-border bg-white shadow-sm"
